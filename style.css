@@ -1,39 +1,130 @@
-body {
-    background-color: #f0f2f5;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    color: #333;
+/* الألوان والخطوط الأساسية */
+:root {
+    --main-color: #1a237e; /* أزرق كحلي فخمم */
+    --accent-color: #c5a059; /* ذهبي هادئ */
+    --bg-color: #f8f9fa;
+    --text-color: #333;
 }
 
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* تنسيق الهيدر */
 header {
-    background-color: #007bff; /* لون أزرق */
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
     color: white;
-    padding: 50px 20px;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-color);
 }
 
 header h1 {
-    margin: 0;
     font-size: 3em;
+    margin-bottom: 10px;
 }
 
-main {
-    padding: 40px;
-    background: white;
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
 }
 
-.btn {
+.bio {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #e8eaf6;
+}
+
+/* زر التليجرام */
+.telegram-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: #28a745; /* لون أخضر للزر */
+    background-color: #0088cc; /* لون تليجرام */
     color: white;
+    padding: 12px 30px;
+    margin-top: 25px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,136,204,0.4);
+    transition: transform 0.3s;
+}
+
+.telegram-btn:hover {
+    transform: translateY(-3px);
+    background-color: #0077b5;
+}
+
+/* تنسيق الأقسام */
+main {
+    padding: 40px 0;
+}
+
+.year-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: var(--main-color);
+    border-right: 5px solid var(--accent-color);
+    padding-right: 15px;
+    margin-bottom: 25px;
+}
+
+/* تنسيق البطاقات (المقاييس) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-top: 3px solid var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--main-color);
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #bbb;
+    font-size: 0.9em;
+    margin-top: 50px;
 }

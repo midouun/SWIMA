@@ -11,85 +11,118 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">SWIMA</div>
+        <div class="logo"><i class="fas fa-balance-scale"></i> SWIMA</div>
         <ul class="nav-links">
             <li><a href="#year1">السنة الأولى</a></li>
             <li><a href="#year2">السنة الثانية</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
+            <li><a href="#about">عن المشرف</a></li>
         </ul>
     </nav>
 
-    <header>
-        <div class="header-content">
-            <h1>منصة SWIMA القانونية</h1>
-            <p class="subtitle">شروحات ومحاضرات الحقوق بإشراف الطالب: <br><strong>جمعة محمد عرفات</strong></p>
-            <div class="header-buttons">
-                <a href="رابط_التلغرام_هنا" class="btn primary-btn"><i class="fab fa-telegram-plane"></i> انضم للقناة الرسمية</a>
+    <header class="hero">
+        <div class="overlay">
+            <div class="hero-content">
+                <span class="badge">المنصة التعليمية الأولى</span>
+                <h1>موسوعة SWIMA القانونية</h1>
+                <p>شروحات مبسطة ومحاضرات في العلوم القانونية <br> تحت إشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="ابحث عن مقياس أو درس...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="header-buttons">
+                    <a href="رابط_التلغرام_هنا" class="btn primary-btn"><i class="fab fa-telegram-plane"></i> انضم للقناة الرسمية</a>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="container">
         
-        <section id="year1" class="year-section">
-            <h2 class="section-title"><i class="fas fa-book-reader"></i> السنة الأولى ليسانس</h2>
+        <section id="year1" class="section-padding">
+            <div class="section-header">
+                <h2>السنة الأولى ليسانس</h2>
+                <div class="line"></div>
+            </div>
             <div class="cards-grid">
                 <div class="card">
-                    <div class="icon-box"><i class="fas fa-university"></i></div>
+                    <div class="icon-bg"><i class="fas fa-university"></i></div>
                     <h3>مدخل للعلوم القانونية</h3>
-                    <p>المفاهيم الأولية، نظرية القانون، ونظرية الحق.</p>
-                    <a href="#" class="card-btn">تصفح الملخصات</a>
+                    <p>نظرية القانون والحق، وتقسيمات القاعدة القانونية.</p>
+                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
                 </div>
                 <div class="card">
-                    <div class="icon-box"><i class="fas fa-landmark"></i></div>
+                    <div class="icon-bg"><i class="fas fa-landmark"></i></div>
                     <h3>القانون الدستوري</h3>
-                    <p>أنظمة الحكم، الدساتير، والمؤسسات الدستورية.</p>
-                    <a href="#" class="card-btn">تصفح الملخصات</a>
+                    <p>المبادئ الدستورية، وأنظمة الحكم المقارنة.</p>
+                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
                 </div>
                 <div class="card">
-                    <div class="icon-box"><i class="fas fa-gavel"></i></div>
+                    <div class="icon-bg"><i class="fas fa-gavel"></i></div>
                     <h3>التنظيم القضائي</h3>
-                    <p>الهيكلة القضائية والمحاكم في الجزائر.</p>
-                    <a href="#" class="card-btn">تصفح الملخصات</a>
+                    <p>مبادئ القضاء، المحكمة العليا، والمجالس القضائية.</p>
+                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
         </section>
 
-        <hr>
-
-        <section id="year2" class="year-section">
-            <h2 class="section-title"><i class="fas fa-balance-scale"></i> السنة الثانية ليسانس</h2>
+        <section id="year2" class="section-padding">
+            <div class="section-header">
+                <h2>السنة الثانية ليسانس</h2>
+                <div class="line"></div>
+            </div>
             <div class="cards-grid">
                 <div class="card">
-                    <div class="icon-box"><i class="fas fa-file-contract"></i></div>
+                    <div class="icon-bg"><i class="fas fa-file-contract"></i></div>
                     <h3>القانون المدني</h3>
-                    <p>أحكام الالتزام، العقود، والمسؤولية التقصيرية.</p>
-                    <a href="#" class="card-btn">تصفح الملخصات</a>
+                    <p>مصادر الالتزام، العقد، الإرادة المنفردة، والعمل غير المشروع.</p>
+                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
                 </div>
                 <div class="card">
-                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                    <div class="icon-bg"><i class="fas fa-briefcase"></i></div>
                     <h3>القانون التجاري</h3>
-                    <p>الأعمال التجارية، التاجر، والشركات التجارية.</p>
-                    <a href="#" class="card-btn">تصفح الملخصات</a>
+                    <p>النظرية العامة للقانون التجاري والشركات.</p>
+                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
                 </div>
                 <div class="card">
-                    <div class="icon-box"><i class="fas fa-handcuffs"></i></div>
+                    <div class="icon-bg"><i class="fas fa-handcuffs"></i></div>
                     <h3>القانون الجنائي العام</h3>
-                    <p>الركن المادي والمعنوي للجريمة والعقوبات.</p>
-                    <a href="#" class="card-btn">تصفح الملخصات</a>
+                    <p>الجريمة وأركانها، والمسؤولية الجزائية.</p>
+                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>عن المشرف</h2>
+                    <h3>الطالب: جمعة محمد عرفات</h3>
+                    <p>طالب حقوق مهتم بتبسيط العلوم القانونية لزملائنا الطلبة. نسعى من خلال منصة SWIMA إلى توفير مرجع شامل وسهل الوصول إليه للمقاييس الأساسية.</p>
+                    <ul class="achievements">
+                        <li><i class="fas fa-check-circle"></i> شروحات مبسطة</li>
+                        <li><i class="fas fa-check-circle"></i> ملخصات PDF</li>
+                        <li><i class="fas fa-check-circle"></i> متابعة مستمرة</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="صورة الطالب">
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer id="contact">
-        <p>مشروع SWIMA التعليمي - جميع الحقوق محفوظة &copy; 2024</p>
-        <p>الطالب: جمعة محمد عرفات</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-telegram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
+    <footer>
+        <div class="footer-content">
+            <h3>SWIMA</h3>
+            <p>جميع الحقوق محفوظة للطالب جمعة محمد عرفات &copy; 2024</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 

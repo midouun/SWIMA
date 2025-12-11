@@ -3,66 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIMA | منصة الطالب جمعة محمد عرفات</title>
+    <title>SWIMA | المنصة القانونية</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="logo">SWIMA</div>
+        <ul class="nav-links">
+            <li><a href="#year1">السنة الأولى</a></li>
+            <li><a href="#year2">السنة الثانية</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <div class="container">
+        <div class="header-content">
             <h1>منصة SWIMA القانونية</h1>
-            <p class="subtitle">بإشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
-            <p class="bio">شروحات مبسطة وملخصات لمقاييس الحقوق (ليسانس)</p>
-            <a href="رابط_التلغرام_هنا" class="telegram-btn">انضم لقناتنا على تليجرام</a>
+            <p class="subtitle">شروحات ومحاضرات الحقوق بإشراف الطالب: <br><strong>جمعة محمد عرفات</strong></p>
+            <div class="header-buttons">
+                <a href="رابط_التلغرام_هنا" class="btn primary-btn"><i class="fab fa-telegram-plane"></i> انضم للقناة الرسمية</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
         
-        <section class="year-section">
-            <h2 class="section-title">📚 السنة الأولى ليسانس</h2>
+        <section id="year1" class="year-section">
+            <h2 class="section-title"><i class="fas fa-book-reader"></i> السنة الأولى ليسانس</h2>
             <div class="cards-grid">
                 <div class="card">
+                    <div class="icon-box"><i class="fas fa-university"></i></div>
                     <h3>مدخل للعلوم القانونية</h3>
-                    <p>شرح الأساسيات والمفاهيم الأولية للقانون.</p>
+                    <p>المفاهيم الأولية، نظرية القانون، ونظرية الحق.</p>
+                    <a href="#" class="card-btn">تصفح الملخصات</a>
                 </div>
                 <div class="card">
+                    <div class="icon-box"><i class="fas fa-landmark"></i></div>
                     <h3>القانون الدستوري</h3>
-                    <p>دراسة الدساتير وأنظمة الحكم والمؤسسات.</p>
+                    <p>أنظمة الحكم، الدساتير، والمؤسسات الدستورية.</p>
+                    <a href="#" class="card-btn">تصفح الملخصات</a>
                 </div>
                 <div class="card">
+                    <div class="icon-box"><i class="fas fa-gavel"></i></div>
                     <h3>التنظيم القضائي</h3>
-                    <p>هيكلة المحاكم ودرجات التقاضي في الجزائر.</p>
+                    <p>الهيكلة القضائية والمحاكم في الجزائر.</p>
+                    <a href="#" class="card-btn">تصفح الملخصات</a>
                 </div>
             </div>
         </section>
 
         <hr>
 
-        <section class="year-section">
-            <h2 class="section-title">⚖️ السنة الثانية ليسانس</h2>
+        <section id="year2" class="year-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> السنة الثانية ليسانس</h2>
             <div class="cards-grid">
                 <div class="card">
+                    <div class="icon-box"><i class="fas fa-file-contract"></i></div>
                     <h3>القانون المدني</h3>
-                    <p>الالتزامات، العقود، والمسؤولية المدنية.</p>
+                    <p>أحكام الالتزام، العقود، والمسؤولية التقصيرية.</p>
+                    <a href="#" class="card-btn">تصفح الملخصات</a>
                 </div>
                 <div class="card">
+                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
                     <h3>القانون التجاري</h3>
-                    <p>الأعمال التجارية والتاجر والشركات.</p>
+                    <p>الأعمال التجارية، التاجر، والشركات التجارية.</p>
+                    <a href="#" class="card-btn">تصفح الملخصات</a>
                 </div>
                 <div class="card">
+                    <div class="icon-box"><i class="fas fa-handcuffs"></i></div>
                     <h3>القانون الجنائي العام</h3>
-                    <p>الجريمة، المجرم، والعقوبة.</p>
+                    <p>الركن المادي والمعنوي للجريمة والعقوبات.</p>
+                    <a href="#" class="card-btn">تصفح الملخصات</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2024 - الطالب جمعة محمد عرفات</p>
-        <p>مشروع SWIMA التعليمي</p>
+    <footer id="contact">
+        <p>مشروع SWIMA التعليمي - جميع الحقوق محفوظة &copy; 2024</p>
+        <p>الطالب: جمعة محمد عرفات</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
     </footer>
 
 </body>

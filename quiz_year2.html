@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كويز السنة الثانية | SWIMA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #f0f2f5; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px 0; }
+        
+        /* تصميم مقدمة النص الأدبي */
+        .intro-card {
+            background: #fff;
+            width: 90%;
+            max-width: 700px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            text-align: center;
+            border-top: 5px solid #1a237e;
+            position: relative;
+        }
+        
+        .logo-img { width: 100px; margin-bottom: 15px; }
+        
+        .poetic-text {
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 1.3rem;
+            line-height: 2.2;
+            color: #333;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        /* الكلمات القانونية باللون الأحمر */
+        .legal-term { color: #c62828; font-weight: bold; }
+        
+        /* حاوية الكويز */
+        .quiz-container {
+            background: white; width: 90%; max-width: 600px; padding: 30px;
+            border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center; position: relative; border: 2px solid #e0e0e0;
+        }
+        .quiz-header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        .streak-counter {
+            background: #1a237e; color: white; padding: 5px 15px; border-radius: 20px;
+            font-weight: bold; display: inline-block; margin-bottom: 10px; font-family: 'Tajawal';
+        }
+        .question-text { font-size: 1.3rem; font-weight: bold; color: #333; margin-bottom: 30px; font-family: 'Tajawal'; }
+        .options-grid { display: grid; gap: 15px; }
+        .option-btn {
+            background: #f8f9fa; border: 2px solid #e9ecef; padding: 15px;
+            border-radius: 10px; cursor: pointer; font-family: 'Tajawal'; font-size: 1.1rem;
+            transition: 0.3s; width: 100%; font-weight: bold; color: #555;
+        }
+        .option-btn:hover { background: #e3f2fd; border-color: #1a237e; }
+        .option-btn.correct { background: #c8e6c9; border-color: #2e7d32; color: #2e7d32; }
+        .option-btn.wrong { background: #ffcdd2; border-color: #c62828; color: #c62828; }
+        
+        .back-home { position: absolute; top: 20px; right: 20px; text-decoration: none; color: #555; font-size: 1.2rem; }
+
+        /* نافذة التهنئة */
+        .special-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 3000; align-items: center; justify-content: center;
+        }
+        .special-content {
+            background: linear-gradient(135deg, #b71c1c, #d32f2f);
+            color: white; padding: 40px; border-radius: 20px; text-align: center;
+            max-width: 500px; width: 90%; box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+            animation: popIn 0.5s; position: relative; border: 4px solid #ffc107;
+        }
+        @keyframes popIn { from {transform: scale(0.5); opacity: 0;} to {transform: scale(1); opacity: 1;} }
+        .special-icon { font-size: 4rem; color: #ffc107; margin-bottom: 20px; }
+        .telegram-btn {
+            background: white; color: #b71c1c; text-decoration: none; padding: 15px 30px;
+            border-radius: 50px; font-weight: 900; display: inline-block; margin-top: 20px;
+            transition: 0.3s; border: 2px solid #ffc107; font-family: 'Tajawal';
+        }
+        .telegram-btn:hover { transform: scale(1.1); box-shadow: 0 0 20px #ffc107; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home"><i class="fas fa-home"></i> خروج</a>
+
+    <div class="intro-card">
+        <img src="logo.jpg" alt="SWIMA" class="logo-img">
+        <div class="poetic-text">
+            اغتنم ساعة في <span class="legal-term">طلب العلم</span> و الجلوس في مجالس العلم و لن تدرك قيمتها الا بعد زوالها فاجعل من طلب العلم مفهوما و الجلوس و الاستماع <span class="legal-term">ركنا</span> و الاحترام <span class="legal-term">شرطا</span> و عدم الحظور يقيم عليك <span class="legal-term">المسؤولية التقصيرية</span> و الانتظام يمنحك <span class="legal-term">صفة الطالب</span> و النقاش يضفي عليك <span class="legal-term">صفة الباحث</span> و المكالمات المرئية هي <span class="legal-term">اثراء بلا سبب</span> و تقديرك لمن يعطيك معلومة يحل محل <span class="legal-term">الشرط الفاسخ</span> و كذا ملازمة المراجعة تعفيك من الوقوع في <span class="legal-term">عبئ الاثبات</span> و سهر في ما لا ينفعك يترتب يحل محل <span class="legal-term">العلاقة السببية</span> و المماطلة و الكسل <span class="legal-term">عيب من عيوب الارادة</span> وكذا صلاة وذكر في وقته يكسبك <span class="legal-term">حرية الاثبات</span> و زدها يا زميلي الاعتكاف على البحث كـ <span class="legal-term">العقد شريعة المتعاقدين</span> و ان كانت <span class="legal-term">الضروف الطارئة</span> تعفي من <span class="legal-term">المسؤولية</span> فجهلك بـ <span class="legal-term">الاجرائات</span> هو المصيبة الاكبر فهي <span class="legal-term">ركن الشكلية</span> و دعني احدثك عن تلك الام فقدت ولدها فحزنت حتى <span class="legal-term">فقدت اهليتها</span> و قيل في من قال ان الطالب الذي يبحث عن الشهادة فقط لم يحسن اختيار موضوع بحثه و المفاجاة الكبرى هي ان <span class="legal-term">الاجال</span> خط احمر فان انقضت لا سبيل لـ <span class="legal-term">طعن</span> الا مانص عليه كـ <span class="legal-term">استثناء</span> و اين <span class="legal-term">النص</span> ان كان مركزك قد مر الزمان عليه حتى وقع عليك <span class="legal-term">مبدا الاثر الفوري</span> و ان سلمت نفسك لاستاذك و تمعنت حتى وان فاتتك تدوين الملاحظات فان كنت تعتقد انه عندما ينهرك استاذك بعبارة و انت تاخذك الحمية و تعتقد انك في حالة <span class="legal-term">الدفاع الشرعي</span> فاذكرك يا زميلي انه فعله كان <span class="legal-term">مشروعا</span> وهو ما امرت و مااذنت به به العادة فـ <span class="legal-term">الاصل في الافعال الاباحة</span> الا تتفق معي فسلوك الاستاذ نحوك كان ايجابي فانظر من زاوية اخرى فيا زميلي لك من اطيب التحيات ونسال الله ان يوفقكم و يرزقكم الفهم و <span class="legal-term">موانع العقاب</span> في السر والعلن.
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2 style="color:#1a237e; margin:0; font-family:'Tajawal'">اختبر معلوماتك (السنة 02)</h2>
+            <div style="margin-top:10px;">
+                <span class="streak-counter">الإجابات المتتالية: <span id="streakNum">0</span> / 10 🔥</span>
+            </div>
+        </div>
+
+        <div id="quizBody">
+            <div class="question-text" id="question">جاري تحميل السؤال...</div>
+            <div class="options-grid" id="options">
+                </div>
+        </div>
+    </div>
+
+    <div id="congratsModal" class="special-modal">
+        <div class="special-content">
+            <div class="special-icon"><i class="fas fa-crown"></i></div>
+            <h2 style="font-family:'Tajawal'">مبروك يا بطل! 🥇</h2>
+            <p style="font-size:1.2rem; margin: 15px 0; font-family:'Tajawal'">لقد حققت 10 إجابات صحيحة متتالية في القانون المدني!</p>
+            <p style="font-family:'Tajawal'">أنت تستحق تهنئة خاصة من الطالب الباحث.</p>
+            
+            <a href="#" id="telegramLink" target="_blank" class="telegram-btn">
+                <i class="fab fa-telegram-plane"></i> أحصل على التهنئة الخاصة
+            </a>
+            <br><br>
+            <button onclick="location.reload()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer; font-family:'Tajawal'">إعادة المحاولة</button>
+        </div>
+    </div>
+
+    <script>
+        // --- أسئلة خاصة بالسنة الثانية (مدني، التزامات، عقوبات) ---
+        const questions = [
+            {
+                q: "العقد شريعة المتعاقدين، تعني أن العقد يقوم مقام:",
+                options: ["القانون بين الأطراف", "الدستور", "العرف", "الأخلاق"],
+                answer: 0
+            },
+            {
+                q: "أركان العقد هي:",
+                options: ["الرضا، المحل، السبب", "الكتابة فقط", "التسليم فقط", "الإيجاب والقبول فقط"],
+                answer: 0
+            },
+            {
+                q: "المسؤولية التقصيرية تقوم على ثلاثة أركان هي:",
+                options: ["الخطأ، الضرر، العلاقة السببية", "العقد، الضرر، التعويض", "الجريمة، العقوبة، الحكم", "الخطأ، العقد، السبب"],
+                answer: 0
+            },
+            {
+                q: "الإثراء بلا سبب يعتبر مصدراً من مصادر:",
+                options: ["الحق العيني", "الالتزام", "القانون التجاري", "القانون الإداري"],
+                answer: 1
+            },
+            {
+                q: "الركن الشرعي للجريمة يعني:",
+                options: ["خضوع الفعل لنص التجريم (لا جريمة إلا بنص)", "ارتكاب الفعل مادياً", "نية الفاعل", "وقوع الضرر"],
+                answer: 0
+            },
+            {
+                q: "سن التمييز في القانون المدني الجزائري محدد بـ:",
+                options: ["10 سنوات", "13 سنة", "16 سنة", "18 سنة"],
+                answer: 1
+            },
+            {
+                q: "البطلان المطلق يلحق العقد إذا:",
+                options: ["تخلف ركن من أركانه", "شابه عيب في الإرادة", "كان أحد الأطراف ناقص الأهلية", "كان الثمن مرتفعاً"],
+                answer: 0
+            },
+            {
+                q: "من عيوب الإرادة:",
+                options: ["الغلط والتدليس والإكراه", "المرض", "السفر", "النسيان"],
+                answer: 0
+            },
+            {
+                q: "القرار الإداري يصدر عن:",
+                options: ["السلطة القضائية", "السلطة الإدارية بإرادتها المنفردة", "الأفراد", "الشركات الخاصة"],
+                answer: 1
+            },
+            {
+                q: "تنقضي الالتزامات بـ:",
+                options: ["الوفاء", "المرض", "السفر", "الزواج"],
+                answer: 0
+            }
+        ];
+        // ----------------------------------------------------
+
+        let currentStreak = 0;
+        let availableQuestions = [...questions]; 
+
+        function loadQuestion() {
+            if (availableQuestions.length === 0) availableQuestions = [...questions];
+            const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+            const currentQ = availableQuestions[randomIndex];
+            availableQuestions.splice(randomIndex, 1);
+
+            document.getElementById("question").innerText = currentQ.q;
+            const optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = "";
+
+            currentQ.options.forEach((opt, index) => {
+                const btn = document.createElement("button");
+                btn.className = "option-btn";
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(index, currentQ.answer, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIndex, correctIndex, btnElement) {
+            const buttons = document.querySelectorAll(".option-btn");
+            buttons.forEach(b => b.disabled = true);
+
+            if (selectedIndex === correctIndex) {
+                btnElement.classList.add("correct");
+                currentStreak++;
+                document.getElementById("streakNum").innerText = currentStreak;
+
+                if (currentStreak >= 10) {
+                    setTimeout(showCongrats, 500);
+                } else {
+                    setTimeout(loadQuestion, 1000);
+                }
+            } else {
+                btnElement.classList.add("wrong");
+                buttons[correctIndex].classList.add("correct");
+                currentStreak = 0;
+                document.getElementById("streakNum").innerText = currentStreak;
+                setTimeout(loadQuestion, 1500);
+            }
+        }
+
+        function showCongrats() {
+            const username = "Mouuha_dje";
+            const message = "مرحبا استاذ محمد لقد اتممت مرحلة الكويز (السنة الثانية) شكرا جزيلا على هذه الفعالية وفي اخر الرسالة مكتوب ارسلها لستكمل اجراء الحصول على تهنئة خاصة";
+            const telegramUrl = `https://t.me/${username}?text=${encodeURIComponent(message)}`;
+            
+            document.getElementById("telegramLink").href = telegramUrl;
+            document.getElementById("congratsModal").style.display = "flex";
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>

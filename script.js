@@ -1,0 +1,40 @@
+const themeBtn = document.getElementById('theme-toggle');
+const body = document.body;
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
+const noResults = document.getElementById('noResults');
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+themeBtn.addEventListener('click', () => {
+    if (body.hasAttribute('data-theme')) {
+        body.removeAttribute('data-theme');
+        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+});
+
+searchInput.addEventListener('keyup', (e) => {
+    const text = e.target.value.toLowerCase();
+    let hasResults = false;
+    cards.forEach(card => {
+        if (card.getAttribute('data-title').includes(text)) {
+            card.style.display = "block";
+            hasResults = true;
+        } else {
+            card.style.display = "none";
+        }
+    });
+    noResults.style.display = hasResults ? "none" : "block";
+});
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+};
+
+function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }

@@ -74,6 +74,26 @@ body { font-family: 'Tajawal', sans-serif; margin: 0; background-color: var(--bg
 }
 .methodology-btn:hover { background: var(--accent); color: black; transform: scale(1.05); border-color: var(--accent); }
 
+/* --- قسم مسائل للمطالعة (جديد) --- */
+#legal-reading { margin-bottom: 50px; }
+.legal-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; }
+.legal-card {
+    background: white; border-radius: 15px; width: 300px; text-decoration: none; color: var(--text-main);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; overflow: hidden; border: 1px solid #eee;
+    display: flex; flex-direction: column;
+}
+.legal-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); border-color: var(--accent); }
+.legal-img {
+    background: linear-gradient(135deg, #1a237e, #534bae); height: 120px; display: flex;
+    align-items: center; justify-content: center; color: white; font-size: 3rem;
+}
+.legal-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+.legal-cat { color: var(--primary); font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; display: block; }
+.legal-card h3 { margin: 0 0 10px 0; font-size: 1.1rem; line-height: 1.4; }
+.legal-card p { font-size: 0.9rem; color: #666; margin-bottom: 20px; line-height: 1.6; flex-grow: 1; }
+.read-btn { color: var(--primary); font-weight: bold; font-size: 0.9rem; align-self: flex-end; transition: 0.2s; }
+.legal-card:hover .read-btn { color: var(--accent); padding-left: 5px; }
+
 /* General Layout */
 .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
 .section-header { text-align: center; margin-bottom: 40px; }
@@ -108,4 +128,10 @@ body { font-family: 'Tajawal', sans-serif; margin: 0; background-color: var(--bg
 .law-chapter h4 { color: var(--primary); border-right: 4px solid var(--accent); padding-right: 10px; margin-bottom: 15px; font-size: 1.2rem; }
 #scrollTopBtn { display: none; position: fixed; bottom: 30px; left: 30px; background: var(--accent); border: none; padding: 15px; border-radius: 50%; cursor: pointer; color: var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
 footer { background: var(--primary); color: white; padding: 40px 0; text-align: center; margin-top: 50px; }
-@media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 1.8rem; } .social-3d-grid { flex-direction: column; align-items: center; } .btn-3d { width: 80%; } }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 1.8rem; }
+    .social-3d-grid { flex-direction: column; align-items: center; }
+    .btn-3d { width: 80%; }
+}

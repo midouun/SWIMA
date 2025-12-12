@@ -1,108 +1,41 @@
-:root {
-    --primary: #1a237e;
-    --accent: #ffca28;
-    --bg-body: #f4f6f9;
-    --bg-card: #ffffff;
-    --text-main: #333;
-    --text-sec: #666;
-    --navbar-bg: rgba(255, 255, 255, 0.95);
-}
+const themeBtn = document.getElementById('theme-toggle');
+const body = document.body;
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
+const noResults = document.getElementById('noResults');
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-[data-theme="dark"] {
-    --primary: #5c6bc0;
-    --accent: #ffd54f;
-    --bg-body: #121212;
-    --bg-card: #1e1e1e;
-    --text-main: #e0e0e0;
-    --text-sec: #aaaaaa;
-    --navbar-bg: rgba(18, 18, 18, 0.95);
-}
+themeBtn.addEventListener('click', () => {
+    if (body.hasAttribute('data-theme')) {
+        body.removeAttribute('data-theme');
+        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+});
 
-body {
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    font-family: 'Tajawal', sans-serif;
-    margin: 0;
-    transition: 0.3s;
-}
+searchInput.addEventListener('keyup', (e) => {
+    const text = e.target.value.toLowerCase();
+    let hasResults = false;
+    cards.forEach(card => {
+        const title = card.getAttribute('data-title');
+        if (title.includes(text)) {
+            card.style.display = "block";
+            hasResults = true;
+        } else {
+            card.style.display = "none";
+        }
+    });
+    noResults.style.display = hasResults ? "none" : "block";
+});
 
-/* Navbar & Logo */
-.navbar {
-    background: var(--navbar-bg);
-    padding: 10px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--accent);
-}
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+};
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 10px;
-}
-
-.logo-img { height: 50px; width: auto; border-radius: 50%; } /* تحسين بسيط للشعار */
-.logo-text { color: var(--primary); font-size: 1.5rem; font-weight: 900; }
-.nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { text-decoration: none; color: var(--text-main); font-weight: bold; }
-.theme-btn { background: none; border: 1px solid var(--text-main); color: var(--text-main); border-radius: 50%; padding: 5px 10px; cursor: pointer; }
-
-/* Hero Section (الخلفية هنا أصبحت logo.jpg) */
-.hero {
-    background-image: linear-gradient(rgba(13, 19, 60, 0.9), rgba(13, 19, 60, 0.9)), url('logo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-.hero-content { position: relative; z-index: 2; }
-.hero h1 { font-size: 3rem; margin: 10px 0; }
-
-/* Search */
-.search-container { background: white; padding: 5px; border-radius: 50px; display: flex; width: 90%; max-width: 500px; margin: 20px auto; }
-.search-container input { flex: 1; border: none; padding: 15px; border-radius: 50px; outline: none; font-family: 'Tajawal'; }
-.search-container button { background: var(--primary); color: white; border: none; width: 50px; border-radius: 50%; cursor: pointer; }
-
-/* Cards */
-.container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-.card { background: var(--bg-card); padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
-.card:hover { transform: translateY(-10px); border-top: 4px solid var(--accent); }
-.card h3 { color: var(--text-main); }
-.icon-box { color: var(--primary); font-size: 2.5rem; margin-bottom: 15px; }
-.card-btn { display: block; border: 1px solid var(--primary); color: var(--primary); padding: 10px; border-radius: 20px; text-decoration: none; margin-top: 15px; transition: 0.3s; }
-.card-btn:hover { background: var(--primary); color: white; }
-
-.btn-pulse { background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; animation: pulse 2s infinite; }
-
-/* Tables */
-.schedule-container { background: var(--bg-card); padding: 20px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-right: 5px solid var(--accent); }
-.schedule-title { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-.table-wrapper { overflow-x: auto; }
-.swima-table { width: 100%; border-collapse: collapse; min-width: 500px; }
-.swima-table th { background-color: var(--primary); color: white; padding: 12px; text-align: right; }
-.swima-table td { padding: 12px; border-bottom: 1px solid #eee; color: var(--text-main); }
-.swima-table td:first-child { font-weight: bold; color: var(--primary); }
-
-/* Notes */
-.notes-container { background-color: #fff9c4; border-right: 5px solid #fbc02d; padding: 20px; margin-top: 40px; border-radius: 8px; color: #333; }
-.notes-container h3 { color: #f57f17; margin-top: 0; }
-.notes-list { list-style: none; padding: 0; }
-.notes-list li { margin-bottom: 10px; position: relative; padding-right: 25px; }
-.notes-list li::before { content: '✔'; position: absolute; right: 0; color: var(--primary); }
-
-/* Footer & Scroll */
-#scrollTopBtn { display: none; position: fixed; bottom: 30px; left: 30px; background: var(--accent); border: none; padding: 15px; border-radius: 50%; cursor: pointer; color: var(--primary); }
-footer { background: var(--primary); color: white; padding: 40px 0; text-align: center; margin-top: 50px; }
-
-@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }

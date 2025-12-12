@@ -16,7 +16,7 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
-// 2. البحث (البحث الآن يشمل أسماء المقاييس في الجداول أيضاً إن أردت، لكن الكود الحالي للبطاقات فقط)
+// 2. البحث
 searchInput.addEventListener('keyup', (e) => {
     const text = e.target.value.toLowerCase();
     let hasResults = false;

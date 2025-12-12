@@ -41,24 +41,29 @@
                         <span class="btn-content"><i class="fab fa-instagram"></i> انستغرام</span>
                         <div class="runner-boy"><i class="fas fa-running"></i></div>
                     </a>
+
                     <a href="https://www.facebook.com/profile.php?id=61578125977103" target="_blank" class="btn-3d facebook">
                         <span class="btn-content"><i class="fab fa-facebook-f"></i> فيسبوك</span>
                         <div class="runner-boy"><i class="fas fa-running"></i></div>
                     </a>
+
                     <a href="https://t.me/+GEEk2vlvw3w3NWQ0" target="_blank" class="btn-3d telegram">
                         <span class="btn-content"><i class="fab fa-telegram-plane"></i> سنة 01</span>
                         <div class="runner-boy"><i class="fas fa-running"></i></div>
                     </a>
+
                     <a href="https://t.me/+d19xnYNaGQNiZjA0" target="_blank" class="btn-3d telegram">
                         <span class="btn-content"><i class="fab fa-telegram-plane"></i> سنة 02</span>
                         <div class="runner-boy"><i class="fas fa-running"></i></div>
                     </a>
+
                     <a href="https://t.me/+nb985l4HSXliYzZk" target="_blank" class="btn-3d telegram-pub">
                         <span class="btn-content"><i class="fab fa-telegram-plane"></i> سنة 03 (عام)</span>
                         <div class="runner-boy"><i class="fas fa-running"></i></div>
                     </a>
+
                     <a href="https://t.me/+K1062SbuRe4yYjJk" target="_blank" class="btn-3d telegram-priv">
-                        <span class="btn-content"><i class="fab fa-user-lock"></i> سنة 03 (خاص)</span>
+                        <span class="btn-content"><i class="fas fa-user-lock"></i> سنة 03 (خاص)</span>
                         <div class="runner-boy"><i class="fas fa-running"></i></div>
                     </a>
                 </div>
@@ -80,41 +85,45 @@
 
         <section id="forum">
             <div class="section-header">
-                <h2>🎓 منتدى الطالب الجامعي</h2>
+                <h2>🎓 منتدى الطالب & مسابقات</h2>
                 <div class="line"></div>
-                <p>فضاء للنقاش العلمي وتبادل الأفكار القانونية</p>
+                <p>فضاء للنقاش العلمي واختبار المكتسبات</p>
             </div>
             
             <div class="forum-grid">
-                <div class="forum-card year-1" onclick="openForumModal('السنة الأولى')">
+                <div class="forum-card year-1">
                     <div class="card-icon"><i class="fas fa-university"></i></div>
                     <h3>السنة الأولى</h3>
                     <p>الجذع المشترك</p>
-                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
+                    <button class="forum-link" onclick="openForumModal('السنة الأولى')">المشاركة في المنتدى</button>
+                    <a href="quiz_year1.html" class="quiz-btn"><i class="fas fa-brain"></i> مسابقة الكويز</a>
                 </div>
 
                 <div class="forum-card year-2">
                     <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
                     <h3>السنة الثانية</h3>
                     <p>أساس التخصص</p>
-                    <button class="forum-link" onclick="openForumModal('السنة الثانية')">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
-                    <a href="methodology_hub.html" class="methodology-btn">
-                        <i class="fas fa-layer-group"></i> بوابة مقياس المنهجية
-                    </a>
+                    <button class="forum-link" onclick="openForumModal('السنة الثانية')">المشاركة في المنتدى</button>
+                    
+                    <a href="methodology_hub.html" class="methodology-btn"><i class="fas fa-layer-group"></i> بوابة المنهجية</a>
+                    
+                    <a href="quiz_year2.html" class="quiz-btn"><i class="fas fa-brain"></i> مسابقة الكويز</a>
                 </div>
 
-                <div class="forum-card year-3-pub" onclick="openForumModal('السنة الثالثة عام')">
+                <div class="forum-card year-3-pub">
                     <div class="card-icon"><i class="fas fa-landmark"></i></div>
                     <h3>السنة الثالثة</h3>
                     <p>قانون عام</p>
-                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
+                    <button class="forum-link" onclick="openForumModal('السنة الثالثة عام')">المشاركة في المنتدى</button>
+                    <a href="quiz_year3_pub.html" class="quiz-btn"><i class="fas fa-brain"></i> مسابقة الكويز</a>
                 </div>
 
-                <div class="forum-card year-3-priv" onclick="openForumModal('السنة الثالثة خاص')">
+                <div class="forum-card year-3-priv">
                     <div class="card-icon"><i class="fas fa-gavel"></i></div>
                     <h3>السنة الثالثة</h3>
                     <p>قانون خاص</p>
-                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
+                    <button class="forum-link" onclick="openForumModal('السنة الثالثة خاص')">المشاركة في المنتدى</button>
+                    <a href="quiz_year3_priv.html" class="quiz-btn"><i class="fas fa-brain"></i> مسابقة الكويز</a>
                 </div>
             </div>
         </section>
@@ -123,7 +132,7 @@
             <div class="section-header">
                 <h2>📚 مسائل قانونية للمطالعة</h2>
                 <div class="line"></div>
-                <p>دراسات وقضايا من الواقع القانوني الجزائري</p>
+                <p>مقالات ونقاشات لتصحيح المفاهيم القانونية الشائعة</p>
             </div>
 
             <div class="legal-grid">
@@ -135,8 +144,8 @@
                     <div class="legal-content">
                         <span class="legal-cat" style="color: #d32f2f;">مسألة رقم 01</span>
                         <h3>قضية الشاب الجامعي</h3>
-                        <p>شاب يعمل ليلاً تعرض للسرقة، فاتهمه صاحب العمل بالتواطؤ ورفض دفع أجره. كيف يتصرف قانوناً؟</p>
-                        <span class="read-btn" style="color: #d32f2f;">عرض التحليل القانوني <i class="fas fa-arrow-left"></i></span>
+                        <p>اتهام بالسرقة ومنع الأجر: كيف يدافع الطالب عن حقوقه؟ (حل قانوني مفصل)</p>
+                        <span class="read-btn" style="color: #d32f2f;">عرض التحليل <i class="fas fa-arrow-left"></i></span>
                     </div>
                 </a>
 
@@ -147,7 +156,7 @@
                     <div class="legal-content">
                         <span class="legal-cat">قانون العمل</span>
                         <h3>هل يمكن فصلك من العمل دون سبب؟</h3>
-                        <p>الخطأ الشائع مقابل الحقيقة القانونية: تعرف على حقوقك في حالة الفصل التعسفي.</p>
+                        <p>الخطأ الشائع مقابل الحقيقة القانونية: تعرف على حقوقك.</p>
                         <span class="read-btn">طالع المسألة <i class="fas fa-arrow-left"></i></span>
                     </div>
                 </a>
@@ -159,11 +168,10 @@
                     <div class="legal-content">
                         <span class="legal-cat" style="color: #00695c;">القانون المدني</span>
                         <h3>الفرق بين الحق العيني والحق الشخصي</h3>
-                        <p>شرح مبسط مدعم بالأمثلة والمواد القانونية لفهم الفوارق الجوهرية.</p>
+                        <p>شرح مبسط مدعم بالأمثلة والمواد القانونية.</p>
                         <span class="read-btn" style="color: #00695c;">طالع المسألة <i class="fas fa-arrow-left"></i></span>
                     </div>
                 </a>
-                
             </div>
         </section>
 

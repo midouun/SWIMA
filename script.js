@@ -5,6 +5,7 @@ const cards = document.querySelectorAll('.card');
 const noResults = document.getElementById('noResults');
 const scrollBtn = document.getElementById("scrollTopBtn");
 
+// 1. الوضع الليلي
 themeBtn.addEventListener('click', () => {
     if (body.hasAttribute('data-theme')) {
         body.removeAttribute('data-theme');
@@ -15,6 +16,7 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
+// 2. البحث (البحث الآن يشمل أسماء المقاييس في الجداول أيضاً إن أردت، لكن الكود الحالي للبطاقات فقط)
 searchInput.addEventListener('keyup', (e) => {
     const text = e.target.value.toLowerCase();
     let hasResults = false;
@@ -36,6 +38,7 @@ searchInput.addEventListener('keyup', (e) => {
     }
 });
 
+// 3. زر الصعود
 window.onscroll = function() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         scrollBtn.style.display = "block";

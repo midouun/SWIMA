@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIMA | البوابة القانونية الجامعية</title>
+    <title>SWIMA | البوابة القانونية</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <button onclick="scrollToTop()" id="scrollTopBtn" aria-label="الصعود للأعلى"><i class="fas fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <nav class="navbar">
         <div class="logo-container">
-            <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+            <img src="logo.png" alt="SWIMA" class="nav-logo" onerror="this.style.display='none'">
             <span class="logo-text">SWIMA</span>
         </div>
         <div class="nav-content">
@@ -24,30 +24,25 @@
                 <li><a href="#rules">القانون</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-btn" aria-label="تغيير النمط">
-                <i class="fas fa-moon"></i>
-            </button>
-            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
         </div>
     </nav>
 
     <header class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
-                <span class="badge fade-in">السنة الجامعية 2025/2026</span>
-                <h1 class="slide-up">موسوعة SWIMA التعليمية</h1>
-                <p class="slide-up">شروحات قانونية مبسطة ومراجع شاملة لطلبة الحقوق<br>بإشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
+                <span class="badge">السنة الجامعية 2025/2026</span>
+                <h1>موسوعة SWIMA التعليمية</h1>
+                <p>شروحات قانونية مبسطة بإشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
                 
-                <div class="contact-hero slide-up" id="contact">
-                    <a href="#" class="btn-hero telegram"><i class="fab fa-telegram-plane"></i> القناة</a>
-                    <a href="#" class="btn-hero facebook"><i class="fab fa-facebook-f"></i> الفيسبوك</a>
-                    <a href="mailto:contact@swima.dz" class="btn-hero email"><i class="fas fa-envelope"></i> راسلنا</a>
+                <div class="contact-hero" id="contact">
+                    <a href="#" class="btn-hero telegram"><i class="fab fa-telegram-plane"></i> القناة الرسمية</a>
+                    <a href="#" class="btn-hero facebook"><i class="fab fa-facebook-f"></i> صفحة الفيسبوك</a>
+                    <a href="mailto:contact@swima.dz" class="btn-hero email"><i class="fas fa-envelope"></i> تواصل معنا</a>
                 </div>
 
-                <div class="search-container slide-up">
-                    <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس (مثال: المدني)..." onkeyup="filterSchedule()">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
             </div>
@@ -56,9 +51,7 @@
 
     <div class="ticker-wrap">
         <div class="ticker-title">مبادئ قانونية:</div>
-        <div class="ticker-content" id="legalTicker">
-            <div class="ticker-item">القاعدة القانونية عامة ومجردة...</div>
-        </div>
+        <div class="ticker-content" id="legalTicker">جاري التحميل...</div>
     </div>
 
     <main class="container">
@@ -70,64 +63,63 @@
                 <p>الدراسة تنطلق مساءً ابتداءً من الساعة 19:00</p>
             </div>
             
-            <div class="schedule-grid">
-                <div class="schedule-card" data-year="1">
-                    <h3>السنة الأولى ليسانس</h3>
-                    <div class="table-responsive">
-                        <table class="swima-table">
-                            <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                            <tbody>
-                                <tr><td>الأحد</td><td>19:00 - 20:30</td><td class="subject-name">مدخل للعلوم القانونية</td></tr>
-                                <tr><td>الأربعاء</td><td>19:00 - 20:30</td><td class="subject-name">التنظيم القضائي</td></tr>
-                                <tr><td>السبت</td><td>21:00 - 22:30</td><td class="subject-name">القانون الدستوري</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="note-text">* مقياس "تاريخ النظم" يُقدم كفيديوهات مجانية.</p>
+            <div class="schedule-card">
+                <h3>السنة الأولى ليسانس</h3>
+                <div class="table-responsive">
+                    <table class="swima-table">
+                        <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
+                        <tbody>
+                            <tr><td>الأحد</td><td>19:00 - 20:30</td><td>مدخل للعلوم القانونية</td></tr>
+                            <tr><td>الأربعاء</td><td>19:00 - 20:30</td><td>التنظيم القضائي</td></tr>
+                            <tr><td>السبت</td><td>21:00 - 22:30</td><td>القانون الدستوري</td></tr>
+                        </tbody>
+                    </table>
                 </div>
+                <p class="note-text">* مقياس "تاريخ النظم" يُقدم كفيديوهات مجانية. حصص المنهجية إضافية (الخميس أو السبت).</p>
+            </div>
 
-                <div class="schedule-card" data-year="2">
-                    <h3>السنة الثانية ليسانس</h3>
-                    <div class="table-responsive">
-                        <table class="swima-table">
-                            <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                            <tbody>
-                                <tr><td>الاثنين</td><td>19:00 - 20:30</td><td class="subject-name">القانون المدني</td></tr>
-                                <tr><td>الخميس</td><td>19:00 - 20:30</td><td class="subject-name">قانون العقوبات (العام)</td></tr>
-                                <tr><td>الثلاثاء</td><td>21:00 - 22:30</td><td class="subject-name">القانون التجاري</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="note-text">* مقياس "قانون الأسرة" يُقدم كفيديوهات.</p>
+            <div class="schedule-card">
+                <h3>السنة الثانية ليسانس</h3>
+                <div class="table-responsive">
+                    <table class="swima-table">
+                        <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
+                        <tbody>
+                            <tr><td>الاثنين</td><td>19:00 - 20:30</td><td>القانون المدني</td></tr>
+                            <tr><td>الخميس</td><td>19:00 - 20:30</td><td>قانون العقوبات (العام)</td></tr>
+                            <tr><td>الثلاثاء</td><td>21:00 - 22:30</td><td>القانون التجاري</td></tr>
+                        </tbody>
+                    </table>
                 </div>
+                <p class="note-text">* مقياس "قانون الأسرة" يُقدم كفيديوهات مجانية.</p>
+            </div>
 
-                <div class="schedule-card" data-year="3-public">
-                    <h3>السنة الثالثة (قانون عام)</h3>
-                    <div class="table-responsive">
-                        <table class="swima-table">
-                            <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                            <tbody>
-                                <tr><td>الثلاثاء</td><td>19:00 - 20:30</td><td class="subject-name">قانون العلاقات الدولية</td></tr>
-                                <tr><td>الاثنين</td><td>21:00 - 22:30</td><td class="subject-name">قانون الوظيفة العمومية</td></tr>
-                                <tr><td>الخميس</td><td>21:00 - 22:30</td><td class="subject-name">القرارات والعقود الإدارية</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="schedule-card">
+                <h3>السنة الثالثة (قانون عام)</h3>
+                <div class="table-responsive">
+                    <table class="swima-table">
+                        <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
+                        <tbody>
+                            <tr><td>الثلاثاء</td><td>19:00 - 20:30</td><td>قانون العلاقات الدولية</td></tr>
+                            <tr><td>الاثنين</td><td>21:00 - 22:30</td><td>قانون الوظيفة العمومية</td></tr>
+                            <tr><td>الخميس</td><td>21:00 - 22:30</td><td>القرارات والعقود الإدارية</td></tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <div class="schedule-card" data-year="3-private">
-                    <h3>السنة الثالثة (قانون خاص)</h3>
-                    <div class="table-responsive">
-                        <table class="swima-table">
-                            <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                            <tbody>
-                                <tr><td>السبت</td><td>19:00 - 20:30</td><td class="subject-name">القانون الدولي الخاص</td></tr>
-                                <tr><td>الأحد</td><td>21:00 - 22:30</td><td class="subject-name">الشركات التجارية</td></tr>
-                                <tr><td>الأربعاء</td><td>21:00 - 22:30</td><td class="subject-name">العقود الخاصة</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="schedule-card">
+                <h3>السنة الثالثة (قانون خاص)</h3>
+                <div class="table-responsive">
+                    <table class="swima-table">
+                        <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
+                        <tbody>
+                            <tr><td>السبت</td><td>19:00 - 20:30</td><td>القانون الدولي الخاص</td></tr>
+                            <tr><td>الأحد</td><td>21:00 - 22:30</td><td>الشركات التجارية</td></tr>
+                            <tr><td>الأربعاء</td><td>21:00 - 22:30</td><td>العقود الخاصة</td></tr>
+                        </tbody>
+                    </table>
                 </div>
+                <p class="note-text">* مقياس "المواريث" و"طرق التنفيذ" ستوضع لاحقاً كفيديوهات.</p>
             </div>
         </section>
 
@@ -155,14 +147,12 @@
                     <h3>بوابة ASJP</h3>
                 </a>
             </div>
-            
+            <br>
             <div class="judicial-map-box">
-                <div class="map-icon"><i class="fas fa-map-marked-alt"></i></div>
-                <h3>البحث في المجالس القضائية</h3>
-                <p>اختر الولاية للانتقال لموقع المجلس القضائي مباشرة:</p>
-                <select id="courtsDropdown" class="styled-select">
-                    <option value="">-- اختر المجلس القضائي --</option>
-                    </select>
+                <p>اختر المجلس القضائي (58 ولاية):</p>
+                <select id="courtsDropdown" onchange="if(this.value) window.open(this.value, '_blank')">
+                    <option value="">-- جاري تحميل القائمة... --</option>
+                </select>
             </div>
         </section>
 
@@ -170,18 +160,17 @@
             <div class="section-header">
                 <h2>📜 القانون الداخلي والنظام الأساسي</h2>
                 <div class="line"></div>
+                <p>السنة الجامعية 2025/2026</p>
             </div>
-            <div class="rules-container" id="rulesContainer">
-                </div>
+            <div class="rules-scroll-box" id="rulesContainer">
+                <p style="text-align:center;">جاري جلب مواد القانون...</p>
+            </div>
         </section>
 
     </main>
 
     <footer id="about">
-        <div class="footer-content">
-            <p>جميع الحقوق محفوظة لمشروع SWIMA © 2026</p>
-            <p class="small">تم التطوير لأغراض تعليمية</p>
-        </div>
+        <p>SWIMA Project © 2026</p>
     </footer>
 
     <script src="script.js"></script>

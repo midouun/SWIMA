@@ -68,6 +68,7 @@
                     </a>
 
                 </div>
+
                 <div class="search-container">
                     <input type="text" id="searchInput" placeholder="ابحث عن مقياس أو ملخص...">
                     <button><i class="fas fa-search"></i></button>
@@ -98,11 +99,14 @@
                     <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
                 </div>
 
-                <div class="forum-card year-2" onclick="openForumModal('السنة الثانية')">
+                <div class="forum-card year-2">
                     <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
                     <h3>السنة الثانية</h3>
                     <p>أساس التخصص</p>
-                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
+                    <button class="forum-link" onclick="openForumModal('السنة الثانية')">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
+                    <a href="methodology.html" class="methodology-btn">
+                        <i class="fas fa-book-open"></i> مقياس منهجية البحث (جديد)
+                    </a>
                 </div>
 
                 <div class="forum-card year-3-pub" onclick="openForumModal('السنة الثالثة عام')">
@@ -123,39 +127,31 @@
 
         <div id="forumModal" class="modal">
             <div class="modal-content">
-                <span class="close-modal" onclick="closeForumModal()">&times;</span>
+                <span class="close-modal" onclick="closeForumModal()">×</span>
                 <h3 id="modalTitle">شروط المشاركة في المنتدى</h3>
                 <div class="modal-body">
-                    
                     <div class="participation-box">
                         <h4><i class="fab fa-telegram"></i> آلية المشاركة</h4>
-                        <p>لكل طالب ينوي المشاركة بفكرة، مقال، أو استفسار، يرجى التواصل مباشرة مع المشرف عبر المعرف التالي:</p>
+                        <p>للمشاركة بفكرة، مقال، أو استفسار، يرجى التواصل مع المشرف:</p>
                         <a href="https://t.me/mbsasaaa" target="_blank" class="contact-link">@mbsasaaa</a>
-                        
                         <ul class="forum-rules">
                             <li><i class="fas fa-check-circle"></i> أن تكون الفكرة هادفة وتخدم البحث العلمي.</li>
                             <li><i class="fas fa-check-circle"></i> أن تكون نافعة للزملاء ولها صلة بالمقياس.</li>
                             <li><i class="fas fa-check-circle"></i> الالتزام بآداب الحوار والنقاش الأكاديمي.</li>
                         </ul>
                     </div>
-
                     <div class="wisdom-section">
                         <div class="quote-box quran">
                             <i class="fas fa-quran icon-bg"></i>
-                            <p class="quote-text">﷽ <br> "يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ بِالْقِسْطِ شُهَدَاءَ لِلَّهِ وَلَوْ عَلَى أَنفُسِكُمْ"</p>
+                            <p class="quote-text">﷽ <br> "يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ بِالْقِسْطِ شُهَدَاءَ لِلَّهِ"</p>
                             <span class="quote-source">[سورة النساء: 135]</span>
                         </div>
                         <div class="quote-box hadith">
                             <p class="quote-text">قال رسول الله ﷺ: <br> "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا، سَهَّلَ اللهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ"</p>
-                            <span class="quote-source">[رواه مسلم]</span>
-                        </div>
-                        <div class="quote-box scholar">
-                            <p class="quote-text">"مَنْ أَرَادَ الدُّنْيَا فَعَلَيْهِ بِالْعِلْمِ، وَمَنْ أَرَادَ الآخِرَةَ فَعَلَيْهِ بِالْعِلْمِ"</p>
-                            <span class="quote-source">- الإمام الشافعي (رحمه الله)</span>
                         </div>
                         <div class="quote-box jurist">
-                            <p class="quote-text">"القانون ليس مجرد نصوص جامدة، بل هو روح العدالة التي تسري في عروق المجتمع"</p>
-                            <span class="quote-source">- من أدبيات الفقه القانوني الجزائري</span>
+                            <p class="quote-text">"القانون ليس مجرد نصوص جامدة، بل هو روح العدالة"</p>
+                            <span class="quote-source">- فقه قانوني</span>
                         </div>
                     </div>
                 </div>

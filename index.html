@@ -1,169 +1,138 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIMA | منصة الطالب جمعة محمد عرفات</title>
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
-    
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+<div style="height: 60px;"></div>
 
-    <button onclick="topFunction()" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
-
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.jpg" alt="شعار SWIMA" style="height: 50px; width: 50px; border-radius: 50%; vertical-align: middle; border: 2px solid #d4af37; object-fit: cover;"> 
-            <span style="margin-right: 10px;">SWIMA</span>
-        </div>
-        
-        <div class="nav-content">
-            <ul class="nav-links">
-                <li><a href="#year1">السنة الأولى</a></li>
-                <li><a href="#year2">السنة الثانية</a></li>
-                <li><a href="#year3">السنة الثالثة</a></li>
-            </ul>
-            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <span class="badge">المنصة القانونية الجزائرية</span>
-                <h1>موسوعة SWIMA التعليمية</h1>
-                <p>ملخصات، محاضرات، وشروحات قانونية بإشراف الطالب: <br><strong>جمعة محمد عرفات</strong></p>
-                
-                <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="ابحث عن المقياس (مثال: مدني)...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-
-                <a href="https://www.facebook.com/profile.php?id=61578125977103" target="_blank" class="btn-pulse">
-                    <i class="fab fa-facebook"></i> تابعنا على فيسبوك
-                </a>
-                <br><br>
-                <a href="https://www.instagram.com/law_by_mohamed_swima?igsh=MXE3Y2x0NGthc3A0YQ==" target="_blank" style="color:white; text-decoration:none; font-weight:bold; font-size: 1.1em;">
-                    <i class="fab fa-instagram"></i> تابعنا على إنستغرام
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        
-        <section id="year1">
+        <section id="schedule">
             <div class="section-header">
-                <h2>السنة الأولى ليسانس</h2>
+                <h2>📅 رزنامة التوقيت الدراسي (2025/2026)</h2>
                 <div class="line"></div>
-                <a href="https://t.me/+GEEk2vlvw3w3NWQ0" target="_blank" class="telegram-link">
-                    <i class="fab fa-telegram-plane"></i> قناة السنة الأولى
-                </a>
+                <p style="text-align: center; color: #666; margin-top: 10px;">الدراسة تنطلق من الساعة 19:00 مساءً</p>
             </div>
-            <div class="cards-grid">
-                <div class="card" data-title="مدخل للعلوم القانونية">
-                    <div class="icon-box"><i class="fas fa-university"></i></div>
-                    <h3>مدخل للعلوم القانونية</h3>
-                    <p>نظرية القانون ونظرية الحق.</p>
-                    <a href="https://t.me/+GEEk2vlvw3w3NWQ0" target="_blank" class="card-btn">الذهاب للقناة</a>
-                </div>
-                <div class="card" data-title="القانون الدستوري">
-                    <div class="icon-box"><i class="fas fa-landmark"></i></div>
-                    <h3>القانون الدستوري</h3>
-                    <p>الأنظمة السياسية والدساتير.</p>
-                    <a href="https://t.me/+GEEk2vlvw3w3NWQ0" target="_blank" class="card-btn">الذهاب للقناة</a>
-                </div>
-                <div class="card" data-title="التنظيم القضائي">
-                    <div class="icon-box"><i class="fas fa-gavel"></i></div>
-                    <h3>التنظيم القضائي</h3>
-                    <p>هيكلة المحاكم.</p>
-                    <a href="https://t.me/+GEEk2vlvw3w3NWQ0" target="_blank" class="card-btn">الذهاب للقناة</a>
+
+            <div class="schedule-container">
+                <h3 class="schedule-title">السنة الأولى ليسانس</h3>
+                <div class="table-wrapper">
+                    <table class="swima-table">
+                        <thead>
+                            <tr>
+                                <th>اليوم</th>
+                                <th>التوقيت</th>
+                                <th>المقياس</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>الأحد</td>
+                                <td>19:00 - 20:30</td>
+                                <td>مدخل للعلوم القانونية</td>
+                            </tr>
+                            <tr>
+                                <td>الأربعاء</td>
+                                <td>19:00 - 20:30</td>
+                                <td>التنظيم القضائي</td>
+                            </tr>
+                            <tr>
+                                <td>السبت</td>
+                                <td>21:00 - 22:30</td>
+                                <td>القانون الدستوري</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
+            <div class="schedule-container">
+                <h3 class="schedule-title">السنة الثانية ليسانس</h3>
+                <div class="table-wrapper">
+                    <table class="swima-table">
+                        <thead>
+                            <tr>
+                                <th>اليوم</th>
+                                <th>التوقيت</th>
+                                <th>المقياس</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>الاثنين</td>
+                                <td>19:00 - 20:30</td>
+                                <td>القانون المدني</td>
+                            </tr>
+                            <tr>
+                                <td>الخميس</td>
+                                <td>19:00 - 20:30</td>
+                                <td>قانون العقوبات (العام)</td>
+                            </tr>
+                            <tr>
+                                <td>الثلاثاء</td>
+                                <td>21:00 - 22:30</td>
+                                <td>القانون التجاري</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="schedule-container">
+                <h3 class="schedule-title">السنة الثالثة (قانون عام)</h3>
+                <div class="table-wrapper">
+                    <table class="swima-table">
+                        <thead>
+                            <tr>
+                                <th>اليوم</th>
+                                <th>التوقيت</th>
+                                <th>المقياس</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>الثلاثاء</td>
+                                <td>19:00 - 20:30</td>
+                                <td>قانون العلاقات الدولية</td>
+                            </tr>
+                            <tr>
+                                <td>الاثنين</td>
+                                <td>21:00 - 22:30</td>
+                                <td>قانون الوظيفة العمومية</td>
+                            </tr>
+                            <tr>
+                                <td>الخميس</td>
+                                <td>21:00 - 22:30</td>
+                                <td>القرارات والعقود الإدارية</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="schedule-container">
+                <h3 class="schedule-title">السنة الثالثة (قانون خاص)</h3>
+                <div class="table-wrapper">
+                    <table class="swima-table">
+                        <thead>
+                            <tr>
+                                <th>اليوم</th>
+                                <th>التوقيت</th>
+                                <th>المقياس</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>السبت</td>
+                                <td>19:00 - 20:30</td>
+                                <td>القانون الدولي الخاص</td>
+                            </tr>
+                            <tr>
+                                <td>الأحد</td>
+                                <td>21:00 - 22:30</td>
+                                <td>الشركات التجارية</td>
+                            </tr>
+                            <tr>
+                                <td>الأربعاء</td>
+                                <td>21:00 - 22:30</td>
+                                <td>العقود الخاصة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </section>
-
-        <div style="height: 60px;"></div>
-
-        <section id="year2">
-            <div class="section-header">
-                <h2>السنة الثانية ليسانس</h2>
-                <div class="line"></div>
-                <a href="https://t.me/+d19xnYNaGQNiZjA0" target="_blank" class="telegram-link">
-                    <i class="fab fa-telegram-plane"></i> قناة السنة الثانية
-                </a>
-            </div>
-            <div class="cards-grid">
-                <div class="card" data-title="القانون المدني">
-                    <div class="icon-box"><i class="fas fa-file-signature"></i></div>
-                    <h3>القانون المدني</h3>
-                    <p>الالتزامات والعقود.</p>
-                    <a href="https://t.me/+d19xnYNaGQNiZjA0" target="_blank" class="card-btn">الذهاب للقناة</a>
-                </div>
-                <div class="card" data-title="القانون التجاري">
-                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
-                    <h3>القانون التجاري</h3>
-                    <p>التاجر والشركات.</p>
-                    <a href="https://t.me/+d19xnYNaGQNiZjA0" target="_blank" class="card-btn">الذهاب للقناة</a>
-                </div>
-                <div class="card" data-title="القانون الجنائي">
-                    <div class="icon-box"><i class="fas fa-handcuffs"></i></div>
-                    <h3>القانون الجنائي</h3>
-                    <p>الجريمة والعقوبة.</p>
-                    <a href="https://t.me/+d19xnYNaGQNiZjA0" target="_blank" class="card-btn">الذهاب للقناة</a>
-                </div>
-            </div>
-        </section>
-
-        <div style="height: 60px;"></div>
-
-        <section id="year3">
-            <div class="section-header">
-                <h2>السنة الثالثة ليسانس</h2>
-                <div class="line"></div>
-                <a href="https://t.me/+nb985l4HSXliYzZk" target="_blank" class="telegram-link">
-                    <i class="fab fa-telegram-plane"></i> قناة السنة الثالثة
-                </a>
-            </div>
-            <div class="cards-grid">
-                <div class="card" data-title="الإجراءات المدنية">
-                    <div class="icon-box"><i class="fas fa-balance-scale-right"></i></div>
-                    <h3>الإجراءات المدنية</h3>
-                    <p>قانون الإجراءات.</p>
-                    <a href="https://t.me/+nb985l4HSXliYzZk" target="_blank" class="card-btn">الذهاب للقناة</a>
-                </div>
-                <div class="card" data-title="الأوراق التجارية">
-                    <div class="icon-box"><i class="fas fa-money-check-alt"></i></div>
-                    <h3>الأوراق التجارية</h3>
-                    <p>الشيك والسفتجة.</p>
-                    <a href="https://t.me/+nb985l4HSXliYzZk" target="_blank" class="card-btn">الذهاب للقناة</a>
-                </div>
-                <div class="card" data-title="القناة الخاصة" style="border-top: 4px solid #ffd700;">
-                    <div class="icon-box"><i class="fas fa-lock" style="color: #ffd700;"></i></div>
-                    <h3>القناة الخاصة (Privé)</h3>
-                    <p>محتوى إضافي وحصري.</p>
-                    <a href="https://t.me/+K1062SbuRe4yYjJk" target="_blank" class="card-btn" style="border-color: #ffd700; color: #b8860b;">طلب انضمام</a>
-                </div>
-            </div>
-        </section>
-
-        <div id="noResults" style="display:none; text-align:center;"><h3>لا توجد نتائج مطابقة 😕</h3></div>
-
-    </main>
-
-    <footer id="about">
-        <div class="footer-content">
-            <h3>SWIMA Project</h3>
-            <p>جميع الحقوق محفوظة للطالب <strong>جمعة محمد عرفات</strong> &copy; 2024</p>
-            <div class="social-btns">
-                <a href="https://www.facebook.com/profile.php?id=61578125977103" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/law_by_mohamed_swima?igsh=MXE3Y2x0NGthc3A0YQ==" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>

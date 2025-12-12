@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIMA | البوابة القانونية للطالب جمعة محمد عرفات</title>
+    <title>SWIMA | البوابة القانونية</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,19 +14,16 @@
 
     <nav class="navbar">
         <div class="logo-container">
-            <img src="logo.png" alt="SWIMA Logo" class="nav-logo"> 
+            <img src="logo.png" alt="SWIMA" class="nav-logo">
             <span class="logo-text">SWIMA</span>
         </div>
-        
         <div class="nav-content">
             <ul class="nav-links">
                 <li><a href="#schedule">الرزنامة</a></li>
-                <li><a href="#references">الجهات القضائية</a></li>
-                <li><a href="#rules">النظام الداخلي</a></li>
+                <li><a href="#judicial-map">المحاكم</a></li>
+                <li><a href="#rules">القانون</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-btn" title="تغيير المظهر">
-                <i class="fas fa-moon"></i>
-            </button>
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
         </div>
     </nav>
 
@@ -38,13 +35,13 @@
                 <p>شروحات قانونية مبسطة بإشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
                 
                 <div class="contact-hero">
-                    <a href="رابط_تلغرام" class="btn-hero telegram"><i class="fab fa-telegram-plane"></i> القناة الرسمية</a>
-                    <a href="رابط_فيسبوك" class="btn-hero facebook"><i class="fab fa-facebook-f"></i> صفحة الفيسبوك</a>
-                    <a href="mailto:email@example.com" class="btn-hero email"><i class="fas fa-envelope"></i> تواصل معنا</a>
+                    <a href="https://t.me/YOUR_TELEGRAM_LINK" class="btn-hero telegram"><i class="fab fa-telegram-plane"></i> القناة الرسمية</a>
+                    <a href="https://facebook.com/YOUR_PAGE" class="btn-hero facebook"><i class="fab fa-facebook-f"></i> صفحة الفيسبوك</a>
+                    <a href="mailto:swima@example.com" class="btn-hero email"><i class="fas fa-envelope"></i> تواصل معنا</a>
                 </div>
 
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس (مثال: مدني، جنائي)...">
+                    <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
             </div>
@@ -52,105 +49,19 @@
     </header>
 
     <div class="ticker-wrap">
-        <div class="ticker-title"><i class="fas fa-balance-scale"></i> دراسات قانونية:</div>
-        <div class="ticker-content" id="legalTicker">جاري تحميل المبادئ...</div>
+        <div class="ticker-title">مبادئ قانونية:</div>
+        <div class="ticker-content" id="legalTicker">جاري التحميل...</div>
     </div>
 
     <main class="container">
-
-        <section id="references">
-            <div class="section-header">
-                <h2>🏛️ الخريطة القضائية والمراجع</h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="ref-grid">
-                <a href="https://www.joradp.dz/HAR/Index.htm" target="_blank" class="ref-card">
-                    <div class="ref-icon"><i class="fas fa-newspaper"></i></div>
-                    <h3>الجريدة الرسمية</h3>
-                </a>
-                <a href="https://coursupreme.dz/" target="_blank" class="ref-card">
-                    <div class="ref-icon"><i class="fas fa-gavel"></i></div>
-                    <h3>المحكمة العليا</h3>
-                </a>
-                <a href="https://www.conseildetat.dz/" target="_blank" class="ref-card">
-                    <div class="ref-icon"><i class="fas fa-landmark"></i></div>
-                    <h3>مجلس الدولة</h3>
-                </a>
-                <a href="https://asjp.cerist.dz/" target="_blank" class="ref-card">
-                    <div class="ref-icon"><i class="fas fa-book-reader"></i></div>
-                    <h3>بوابة ASJP</h3>
-                </a>
-            </div>
-
-            <div style="height: 30px;"></div>
-
-            <div class="judicial-map-box">
-                <h3><i class="fas fa-map-marked-alt"></i> دليل الجهات القضائية</h3>
-                <p>اختر الولاية أو الجهة للانتقال لموقعها الرسمي:</p>
-                
-                <div class="select-grid">
-                    <div class="select-group">
-                        <label>المجالس القضائية (58 ولاية)</label>
-                        <select onchange="if(this.value) window.open(this.value, '_blank')">
-                            <option value="">-- اختر المجلس القضائي --</option>
-                            <option value="https://couradrar.mjustice.dz/">01 - مجلس قضاء أدرار</option>
-                            <option value="https://courchlef.mjustice.dz/">02 - مجلس قضاء الشلف</option>
-                            <option value="https://courlaghouat.mjustice.dz/">03 - مجلس قضاء الأغواط</option>
-                            <option value="https://couroumabouaghi.mjustice.dz/">04 - مجلس قضاء أم البواقي</option>
-                            <option value="https://courbatna.mjustice.dz/">05 - مجلس قضاء باتنة</option>
-                            <option value="https://courbejaia.mjustice.dz/">06 - مجلس قضاء بجاية</option>
-                            <option value="https://courbiskra.mjustice.dz/">07 - مجلس قضاء بسكرة</option>
-                            <option value="https://courbechar.mjustice.dz/">08 - مجلس قضاء بشار</option>
-                            <option value="https://courblida.mjustice.dz/">09 - مجلس قضاء البليدة</option>
-                            <option value="https://courbouira.mjustice.dz/">10 - مجلس قضاء البويرة</option>
-                            <option value="https://courtamanrasset.mjustice.dz/">11 - مجلس قضاء تمنراست</option>
-                            <option value="https://courtebessa.mjustice.dz/">12 - مجلس قضاء تبسة</option>
-                            <option value="https://tlemcen.mjustice.dz/">13 - مجلس قضاء تلمسان</option>
-                            <option value="https://tiaret.mjustice.dz/">14 - مجلس قضاء تيارت</option>
-                            <option value="https://tiziouzou.mjustice.dz/">15 - مجلس قضاء تيزي وزو</option>
-                            <option value="https://couralger.mjustice.dz/">16 - مجلس قضاء الجزائر</option>
-                            <option value="https://djelfa.mjustice.dz/">17 - مجلس قضاء الجلفة</option>
-                            <option value="https://jijel.mjustice.dz/">18 - مجلس قضاء جيجل</option>
-                            <option value="https://setif.mjustice.dz/">19 - مجلس قضاء سطيف</option>
-                            <option value="https://saida.mjustice.dz/">20 - مجلس قضاء سعيدة</option>
-                            <option value="https://skikda.mjustice.dz/">21 - مجلس قضاء سكيكدة</option>
-                            <option value="https://sba.mjustice.dz/">22 - مجلس قضاء سيدي بلعباس</option>
-                            <option value="https://annaba.mjustice.dz/">23 - مجلس قضاء عنابة</option>
-                            <option value="https://guelma.mjustice.dz/">24 - مجلس قضاء قالمة</option>
-                            <option value="https://constantine.mjustice.dz/">25 - مجلس قضاء قسنطينة</option>
-                            <option value="https://medea.mjustice.dz/">26 - مجلس قضاء المدية</option>
-                            <option value="https://mostaganem.mjustice.dz/">27 - مجلس قضاء مستغانم</option>
-                            <option value="https://msila.mjustice.dz/">28 - مجلس قضاء المسيلة</option>
-                            <option value="https://mascara.mjustice.dz/">29 - مجلس قضاء معسكر</option>
-                            <option value="https://ouargla.mjustice.dz/">30 - مجلس قضاء ورقلة</option>
-                            <option value="https://oran.mjustice.dz/">31 - مجلس قضاء وهران</option>
-                            </select>
-                    </div>
-
-                    <div class="select-group">
-                        <label>المحاكم الإدارية</label>
-                        <select onchange="if(this.value) window.open(this.value, '_blank')">
-                            <option value="">-- اختر المحكمة الإدارية --</option>
-                            <option value="https://ta-alger.mjustice.dz/">المحكمة الإدارية بالجزائر</option>
-                            <option value="https://ta-oran.mjustice.dz/">المحكمة الإدارية بوهران</option>
-                            <option value="https://ta-constantine.mjustice.dz/">المحكمة الإدارية بقسنطينة</option>
-                            <option value="https://ta-annaba.mjustice.dz/">المحكمة الإدارية بعنابة</option>
-                            <option value="https://ta-ouargla.mjustice.dz/">المحكمة الإدارية بورقلة</option>
-                            <option value="https://ta-bechar.mjustice.dz/">المحكمة الإدارية ببشار</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <section id="schedule">
             <div class="section-header">
                 <h2>📅 رزنامة التوقيت الدراسي</h2>
                 <div class="line"></div>
-                <p class="schedule-note">الدراسة تنطلق مساءً ابتداءً من الساعة 19:00</p>
+                <p>الدراسة تنطلق مساءً ابتداءً من الساعة 19:00</p>
             </div>
-
+            
             <div class="schedule-card">
                 <h3>السنة الأولى ليسانس</h3>
                 <div class="table-responsive">
@@ -179,33 +90,40 @@
                 </div>
                 <p class="note-text">* مقياس "تاريخ النظم" و"قانون الأسرة" يقدم كفيديوهات مجانية.</p>
             </div>
+            
+            </section>
 
-            <div class="schedule-card">
-                <h3>السنة الثالثة (قانون عام)</h3>
-                <div class="table-responsive">
-                    <table class="swima-table">
-                        <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                        <tbody>
-                            <tr><td>الثلاثاء</td><td>19:00 - 20:30</td><td>قانون العلاقات الدولية</td></tr>
-                            <tr><td>الاثنين</td><td>21:00 - 22:30</td><td>قانون الوظيفة العمومية</td></tr>
-                            <tr><td>الخميس</td><td>21:00 - 22:30</td><td>القرارات والعقود الإدارية</td></tr>
-                        </tbody>
-                    </table>
-                </div>
+
+        <section id="judicial-map">
+            <div class="section-header">
+                <h2>🏛️ الخريطة القضائية</h2>
+                <div class="line"></div>
             </div>
             
-             <div class="schedule-card">
-                <h3>السنة الثالثة (قانون خاص)</h3>
-                <div class="table-responsive">
-                    <table class="swima-table">
-                        <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                        <tbody>
-                            <tr><td>السبت</td><td>19:00 - 20:30</td><td>القانون الدولي الخاص</td></tr>
-                            <tr><td>الأحد</td><td>21:00 - 22:30</td><td>الشركات التجارية</td></tr>
-                            <tr><td>الأربعاء</td><td>21:00 - 22:30</td><td>العقود الخاصة</td></tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="ref-grid">
+                <a href="https://www.joradp.dz/HAR/Index.htm" target="_blank" class="ref-card">
+                    <div class="ref-icon"><i class="fas fa-newspaper"></i></div>
+                    <h3>الجريدة الرسمية</h3>
+                </a>
+                <a href="https://coursupreme.dz/" target="_blank" class="ref-card">
+                    <div class="ref-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>المحكمة العليا</h3>
+                </a>
+                <a href="https://www.conseildetat.dz/" target="_blank" class="ref-card">
+                    <div class="ref-icon"><i class="fas fa-landmark"></i></div>
+                    <h3>مجلس الدولة</h3>
+                </a>
+                <a href="https://asjp.cerist.dz/" target="_blank" class="ref-card">
+                    <div class="ref-icon"><i class="fas fa-book-reader"></i></div>
+                    <h3>بوابة ASJP</h3>
+                </a>
+            </div>
+            <br>
+            <div class="judicial-map-box">
+                <p>اختر المجلس القضائي (58 ولاية):</p>
+                <select id="courtsDropdown" onchange="if(this.value) window.open(this.value, '_blank')">
+                    <option value="">-- جاري تحميل المجالس من courts.json... --</option>
+                </select>
             </div>
         </section>
 
@@ -213,69 +131,17 @@
             <div class="section-header">
                 <h2>📜 القانون الداخلي والنظام الأساسي</h2>
                 <div class="line"></div>
-                <p>مجموعة SWIMA - السنة الجامعية 2025/2026</p>
+                <p>السنة الجامعية 2025/2026</p>
             </div>
-            
-            <div class="rules-scroll-box">
-                <div class="law-chapter">
-                    <h4>الديباجة</h4>
-                    <p>تأسيساً على مبادئ التعاون العلمي، وسعياً لترسيخ ثقافة قانونية سليمة لدى طلبة كليات الحقوق في الجزائر، تم تأسيس منصة ومجموعة SWIMA. تعد هذه الوثيقة عقداً تنظيمياً ملزماً يحكم العلاقة بين إدارة المنصة والطلبة.</p>
-                </div>
-
-                <div class="law-chapter">
-                    <h4>الباب الأول: التأسيس والأهداف</h4>
-                    <p><strong>المادة 1:</strong> SWIMA هي مبادرة طلابية تعليمية مستقلة، تهدف لتقديم الدعم البيداغوجي لطلبة الحقوق.</p>
-                    <p><strong>المادة 2 (المصطلحات):</strong> يقصد بالمصطلحات التالية:<br>
-                    - <strong>بصفة منتظمة:</strong> الحضور الفعلي للمكالمات الصوتية لثلاث (03) حصص متتالية.<br>
-                    - <strong>مجموعة التميز:</strong> فضاء خاص للأعضاء الملتزمين يحتوي على الأرشيف.<br>
-                    - <strong>الطالب المشترك:</strong> الطالب الذي قام باقتناء الملخصات المدفوعة.</p>
-                    <p><strong>المادة 3:</strong> نطمح لأن نكون المرجع الأول للطالب الجزائري في تبسيط المقاييس.</p>
-                    <p><strong>المادة 4:</strong> تلتزم المجموعة بقيم الأمانة العلمية والحياد.</p>
-                    <p><strong>المادة 5:</strong> تستهدف الخدمات طلبة الحقوق (ليسانس) في الجامعات الجزائرية.</p>
-                </div>
-
-                <div class="law-chapter">
-                    <h4>الباب الثاني: العضوية والحسابات</h4>
-                    <p><strong>المادة 6:</strong> تكتسب العضوية بالانضمام للقناة أو التسجيل في الموقع.</p>
-                    <p><strong>المادة 7:</strong> يجب استخدام اسم لائق ويمنع انتحال الصفة.</p>
-                    <p><strong>المادة 8:</strong> يمنع وضع صور شخصية خادشة للحياء.</p>
-                    <p><strong>المادة 9:</strong> العضو مسؤول عن نشاط حسابه.</p>
-                    <p><strong>المادة 10:</strong> يفضل استخدام حساب واحد لكل طالب.</p>
-                </div>
-
-                <div class="law-chapter">
-                    <h4>الباب الثالث: النظام الدراسي</h4>
-                    <p><strong>المادة 11:</strong> تنطلق الدروس يومياً الساعة 19:00 مساءً.</p>
-                    <p><strong>المادة 16 مكرر (مكافأة الانضباط):</strong> يحصل العضو الذي يحضر الدروس بصفة منتظمة (3 مرات) على شرف الانضمام لـ "مجموعة التميز" ويستفيد من ملخص مجاني وأرشيف التسجيلات.</p>
-                </div>
-
-                <div class="law-chapter">
-                    <h4>الباب الرابع: المحتوى التعليمي</h4>
-                    <p><strong>المادة 18:</strong> الشرح اليومي للدروس مجاني.</p>
-                    <p><strong>المادة 19:</strong> الملخصات الاحترافية تقدم مقابل رسوم رمزية.</p>
-                </div>
-
-                <div class="law-chapter">
-                    <h4>الباب الثامن: الامتيازات المالية</h4>
-                    <p><strong>المادة 40:</strong> الرسوم رمزية لدعم المنصة.</p>
-                    <p><strong>المادة 44 مكرر (مراجعة العطلة):</strong> يستفيد المشتركون في الملخصات من موعد مراجعة خاص في العطلة مع الطالب الباحث جمعة محمد عرفات.</p>
-                </div>
-
-                <div class="law-chapter">
-                    <h4>أحكام ختامية</h4>
-                    <p><strong>المادة 50:</strong> الانضمام للمجموعة يعني الموافقة التامة على هذا القانون.</p>
-                </div>
+            <div class="rules-scroll-box" id="rulesContainer">
+                <p style="text-align:center;">جاري جلب مواد القانون من rules.json...</p>
             </div>
         </section>
 
     </main>
 
     <footer id="about">
-        <div class="footer-content">
-            <h3>SWIMA Project</h3>
-            <p>جميع الحقوق محفوظة للطالب <strong>جمعة محمد عرفات</strong> &copy; 2026</p>
-            <p>للتواصل والاستفسار يرجى استخدام الأزرار في أعلى الصفحة.</p>
-        </div>
+        <p>SWIMA Project &copy; 2026</p>
     </footer>
 
     <script src="script.js"></script>

@@ -2,6 +2,7 @@ const themeBtn = document.getElementById('theme-toggle');
 const body = document.body;
 const scrollBtn = document.getElementById("scrollTopBtn");
 
+// 1. الوضع الليلي
 themeBtn.addEventListener('click', () => {
     if (body.hasAttribute('data-theme')) {
         body.removeAttribute('data-theme');
@@ -12,6 +13,26 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
+// 2. وظائف نافذة المنتدى (MODAL)
+const modal = document.getElementById("forumModal");
+
+function openForumModal(yearName) {
+    document.getElementById("modalTitle").innerText = "بوابة المشاركة - " + yearName;
+    modal.style.display = "block";
+}
+
+function closeForumModal() {
+    modal.style.display = "none";
+}
+
+// إغلاق النافذة عند الضغط خارجها
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// 3. جلب بيانات المحاكم (courts.json)
 fetch('courts.json')
     .then(response => response.json())
     .then(data => {
@@ -24,16 +45,14 @@ fetch('courts.json')
             dropdown.appendChild(option);
         });
     })
-    .catch(error => {
-        console.error('Error fetching courts:', error);
-        document.getElementById('courtsDropdown').innerHTML = '<option>تعذر تحميل البيانات، تأكد من رفع ملف json</option>';
-    });
+    .catch(err => console.error(err));
 
+// 4. جلب القانون الداخلي (rules.json)
 fetch('rules.json')
     .then(response => response.json())
     .then(data => {
         const container = document.getElementById('rulesContainer');
-        container.innerHTML = '';
+        container.innerHTML = ''; 
         data.forEach(chapter => {
             const div = document.createElement('div');
             div.className = 'law-chapter';
@@ -41,33 +60,28 @@ fetch('rules.json')
             container.appendChild(div);
         });
     })
-    .catch(error => {
-        console.error('Error fetching rules:', error);
-        document.getElementById('rulesContainer').innerHTML = '<p style="text-align:center;">تعذر تحميل القوانين</p>';
-    });
+    .catch(err => console.error(err));
 
+// 5. الشريط المتحرك
 const tickerElement = document.getElementById('legalTicker');
 const maxims = [
     "العقد شريعة المتعاقدين (المادة 106 مدني).",
-    "لا جريمة ولا عقوبة إلا بنص (مبدأ الشرعية).",
-    "البينة على من ادعى واليمين على من أنكر.",
-    "الشك يفسر لمصلحة المتهم.",
+    "لا جريمة ولا عقوبة إلا بنص.",
     "الأصل في الأشياء الإباحة.",
-    "الخاص يقيد العام.",
-    "لا ضرر ولا ضرار.",
-    "المتهم بريء حتى تثبت إدانته.",
-    "القانون لا يحمي المغفلين لكنه يحمي المظلومين."
+    "الشك يفسر لمصلحة المتهم.",
+    "البينة على من ادعى واليمين على من أنكر."
 ];
-let currentIndex = 0;
+let idx = 0;
 setInterval(() => {
     tickerElement.style.opacity = 0;
     setTimeout(() => {
-        tickerElement.innerText = maxims[currentIndex];
+        tickerElement.innerText = maxims[idx];
         tickerElement.style.opacity = 1;
-        currentIndex = (currentIndex + 1) % maxims.length;
+        idx = (idx + 1) % maxims.length;
     }, 500);
-}, 10000);
+}, 8000);
 
+// 6. زر الصعود
 window.onscroll = function() {
     scrollBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
 };

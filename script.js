@@ -13,25 +13,16 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
-// 2. وظائف نافذة المنتدى (MODAL)
+// 2. المودال
 const modal = document.getElementById("forumModal");
-
 function openForumModal(yearName) {
     document.getElementById("modalTitle").innerText = "بوابة المشاركة - " + yearName;
     modal.style.display = "block";
 }
+function closeForumModal() { modal.style.display = "none"; }
+window.onclick = function(event) { if (event.target == modal) modal.style.display = "none"; }
 
-function closeForumModal() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// 3. جلب بيانات المحاكم (courts.json)
+// 3. المحاكم
 fetch('courts.json')
     .then(response => response.json())
     .then(data => {
@@ -46,7 +37,7 @@ fetch('courts.json')
     })
     .catch(err => console.error(err));
 
-// 4. جلب القانون الداخلي (rules.json)
+// 4. القانون
 fetch('rules.json')
     .then(response => response.json())
     .then(data => {
@@ -63,13 +54,7 @@ fetch('rules.json')
 
 // 5. الشريط المتحرك
 const tickerElement = document.getElementById('legalTicker');
-const maxims = [
-    "العقد شريعة المتعاقدين (المادة 106 مدني).",
-    "لا جريمة ولا عقوبة إلا بنص.",
-    "الأصل في الأشياء الإباحة.",
-    "الشك يفسر لمصلحة المتهم.",
-    "البينة على من ادعى واليمين على من أنكر."
-];
+const maxims = ["العقد شريعة المتعاقدين", "لا جريمة إلا بنص", "الأصل البراءة", "الشك يفسر لمصلحة المتهم"];
 let idx = 0;
 setInterval(() => {
     tickerElement.style.opacity = 0;
@@ -80,7 +65,7 @@ setInterval(() => {
     }, 500);
 }, 8000);
 
-// 6. زر الصعود
+// 6. الصعود
 window.onscroll = function() {
     scrollBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
 };

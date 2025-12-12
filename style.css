@@ -1,72 +1,96 @@
-/* ... (احتفظ بنفس المتغيرات وإعدادات الـ Navbar والـ Hero من الرد السابق) ... */
-
-/* --- تحديث: شريط المبادئ (Ticker) ليتوافق مع كودك الجديد --- */
-.ticker-wrap {
-    background: var(--accent-color);
-    color: var(--primary-color);
-    display: flex;
-    height: 50px; /* زيادة الارتفاع قليلاً */
-    align-items: center;
-    position: relative;
+:root {
+    --primary: #1a237e;
+    --accent: #ffca28;
+    --bg-body: #f4f6f9;
+    --bg-card: #ffffff;
+    --text-main: #333;
+    --navbar-bg: rgba(255, 255, 255, 0.98);
+    --ticker-bg: #222;
+    --ticker-text: #fff;
+    --table-head: #1a237e;
+    --table-stripe: #f8f9fa;
 }
 
-.ticker-title {
-    background: var(--primary-color);
-    color: white;
-    padding: 0 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    z-index: 2;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+[data-theme="dark"] {
+    --primary: #5c6bc0;
+    --accent: #ffd54f;
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --navbar-bg: rgba(18, 18, 18, 0.98);
+    --ticker-bg: #000;
+    --table-head: #303f9f;
+    --table-stripe: #2c2c2c;
 }
 
-.ticker-content {
-    padding: 0 20px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    flex-grow: 1;
-    text-align: center;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* تأثير الانتقال السلس */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    transition: 0.3s;
 }
 
-/* --- تحديث: تنسيق فصول القانون (Law Chapters) --- */
-.rules-container {
-    background: var(--bg-color); /* خلفية شفافة لدمج الكروت */
-    padding: 0;
-    border: none;
-    max-height: 600px; /* زيادة الارتفاع */
-    overflow-y: auto;
-}
+/* Navbar */
+.navbar { background: var(--navbar-bg); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.logo-container { display: flex; align-items: center; gap: 10px; }
+.nav-logo { height: 40px; width: auto; }
+.logo-text { font-size: 1.5rem; font-weight: 900; color: var(--primary); }
+.nav-links { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; }
+.nav-links a { text-decoration: none; color: var(--text-main); font-weight: bold; font-size: 0.95rem; }
+.theme-btn { background: none; border: 1px solid var(--text-main); color: var(--text-main); border-radius: 50%; width: 35px; height: 35px; cursor: pointer; }
 
-/* تصميم كل باب من أبواب القانون */
-.law-chapter {
-    background: var(--card-bg);
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    border-right: 5px solid var(--accent-color); /* خط ذهبي على اليمين */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
+/* Hero */
+.hero { background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.hero-overlay { background: rgba(0,0,0,0.75); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.hero h1 { font-size: 2.5rem; margin: 15px 0; }
+.badge { background: var(--accent); color: #000; padding: 5px 15px; border-radius: 20px; font-weight: bold; }
+.contact-hero { display: flex; justify-content: center; gap: 15px; margin: 25px 0; flex-wrap: wrap; }
+.btn-hero { padding: 10px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; color: white; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+.btn-hero:hover { transform: translateY(-3px); }
+.telegram { background: #0088cc; }
+.facebook { background: #1877f2; }
+.email { background: #ea4335; }
 
-.law-chapter h4 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 5px;
-}
+/* Components */
+.search-container { background: white; padding: 5px; border-radius: 50px; display: flex; width: 90%; max-width: 500px; margin: 0 auto; }
+.search-container input { flex: 1; border: none; padding: 15px; border-radius: 50px; outline: none; font-family: 'Tajawal'; }
+.search-container button { background: var(--primary); color: white; border: none; width: 50px; border-radius: 50%; cursor: pointer; }
+.ticker-wrap { background: var(--ticker-bg); color: var(--ticker-text); padding: 10px 0; display: flex; align-items: center; border-bottom: 3px solid var(--accent); overflow: hidden; }
+.ticker-title { background: var(--accent); color: #000; padding: 5px 15px; font-weight: bold; margin-right: 20px; border-radius: 5px 0 0 5px; white-space: nowrap; }
+.ticker-content { font-size: 1rem; font-weight: bold; transition: opacity 0.5s; }
 
-.law-chapter p {
-    font-size: 0.95rem;
-    color: var(--text-color);
-    line-height: 1.8;
-}
+.container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+.section-header { text-align: center; margin-bottom: 30px; }
+.line { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
 
-.law-chapter strong {
-    color: var(--secondary-color);
-}
+.ref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.ref-card { background: var(--bg-card); padding: 20px; border-radius: 10px; text-align: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; transition: 0.3s; }
+.ref-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.ref-icon { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+.ref-card h3 { color: var(--text-main); font-size: 1.1rem; margin: 5px 0; }
 
-/* ... (باقي التنسيقات: الجداول، الفوتر، وزر الصعود تبقى كما هي) ... */
+.judicial-map-box { background: var(--bg-card); padding: 30px; border-radius: 15px; border-top: 4px solid var(--primary); margin-top: 30px; }
+.judicial-map-box select { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-family: 'Tajawal'; cursor: pointer; background: #fff; margin-top: 10px; color: #333; }
+
+.schedule-card { background: var(--bg-card); padding: 20px; border-radius: 15px; margin-bottom: 20px; border-right: 5px solid var(--accent); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.swima-table { width: 100%; border-collapse: collapse; min-width: 500px; }
+.swima-table th { background: var(--primary); color: white; padding: 12px; }
+.swima-table td { padding: 12px; border-bottom: 1px solid #eee; color: var(--text-main); }
+.swima-table tr:nth-child(even) { background-color: var(--table-stripe); }
+.table-responsive { overflow-x: auto; }
+.note-text { font-size: 0.9rem; color: #777; margin-top: 10px; font-style: italic; }
+
+.rules-scroll-box { background: var(--bg-card); padding: 30px; border-radius: 15px; height: 600px; overflow-y: scroll; border: 1px solid #ddd; }
+.law-chapter { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+.law-chapter h4 { color: var(--primary); border-right: 4px solid var(--accent); padding-right: 10px; margin-bottom: 15px; font-size: 1.2rem; }
+.law-chapter p { line-height: 1.8; margin-bottom: 10px; font-size: 0.95rem; }
+
+#scrollTopBtn { display: none; position: fixed; bottom: 30px; left: 30px; background: var(--accent); border: none; padding: 15px; border-radius: 50%; cursor: pointer; color: var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+footer { background: var(--primary); color: white; padding: 40px 0; text-align: center; margin-top: 50px; }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 1.8rem; }
+    .contact-hero { flex-direction: column; width: 80%; }
+}

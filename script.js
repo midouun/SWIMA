@@ -25,7 +25,6 @@ function closeForumModal() {
     modal.style.display = "none";
 }
 
-// إغلاق النافذة عند الضغط خارجها
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";

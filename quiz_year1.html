@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كويز السنة الأولى | SWIMA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #f0f2f5; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .quiz-container {
+            background: white; width: 90%; max-width: 600px; padding: 30px;
+            border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center; position: relative;
+        }
+        .quiz-header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        .streak-counter {
+            background: #1a237e; color: white; padding: 5px 15px; border-radius: 20px;
+            font-weight: bold; display: inline-block; margin-bottom: 10px;
+        }
+        .question-text { font-size: 1.3rem; font-weight: bold; color: #333; margin-bottom: 30px; }
+        .options-grid { display: grid; gap: 15px; }
+        .option-btn {
+            background: #f8f9fa; border: 2px solid #e9ecef; padding: 15px;
+            border-radius: 10px; cursor: pointer; font-family: 'Tajawal'; font-size: 1.1rem;
+            transition: 0.3s; width: 100%;
+        }
+        .option-btn:hover { background: #e3f2fd; border-color: #1a237e; }
+        .option-btn.correct { background: #c8e6c9; border-color: #2e7d32; color: #2e7d32; }
+        .option-btn.wrong { background: #ffcdd2; border-color: #c62828; color: #c62828; }
+        
+        .back-home { position: absolute; top: 20px; right: 20px; text-decoration: none; color: #555; font-size: 1.2rem; }
+
+        /* نافذة التهنئة الخاصة (حمراء) */
+        .special-modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 3000; align-items: center; justify-content: center;
+        }
+        .special-content {
+            background: linear-gradient(135deg, #b71c1c, #d32f2f);
+            color: white; padding: 40px; border-radius: 20px; text-align: center;
+            max-width: 500px; width: 90%; box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+            animation: popIn 0.5s; position: relative; border: 4px solid #ffc107;
+        }
+        @keyframes popIn { from {transform: scale(0.5); opacity: 0;} to {transform: scale(1); opacity: 1;} }
+        .special-icon { font-size: 4rem; color: #ffc107; margin-bottom: 20px; }
+        .telegram-btn {
+            background: white; color: #b71c1c; text-decoration: none; padding: 15px 30px;
+            border-radius: 50px; font-weight: 900; display: inline-block; margin-top: 20px;
+            transition: 0.3s; border: 2px solid #ffc107;
+        }
+        .telegram-btn:hover { transform: scale(1.1); box-shadow: 0 0 20px #ffc107; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home"><i class="fas fa-home"></i> خروج</a>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2 style="color:#1a237e; margin:0;">مسابقة السنة الأولى</h2>
+            <div style="margin-top:10px;">
+                <span class="streak-counter">الإجابات المتتالية: <span id="streakNum">0</span> / 10 🔥</span>
+            </div>
+        </div>
+
+        <div id="quizBody">
+            <div class="question-text" id="question">جاري تحميل السؤال...</div>
+            <div class="options-grid" id="options">
+                </div>
+        </div>
+    </div>
+
+    <div id="congratsModal" class="special-modal">
+        <div class="special-content">
+            <div class="special-icon"><i class="fas fa-crown"></i></div>
+            <h2>مبروك يا بطل! 🥇</h2>
+            <p style="font-size:1.2rem; margin: 15px 0;">لقد حققت 10 إجابات صحيحة متتالية!</p>
+            <p>أنت تستحق تهنئة خاصة من الطالب الباحث.</p>
+            
+            <a href="#" id="telegramLink" target="_blank" class="telegram-btn">
+                <i class="fab fa-telegram-plane"></i> أحصل على التهنئة الخاصة
+            </a>
+            <br><br>
+            <button onclick="location.reload()" style="background:none; border:none; color:white; text-decoration:underline; cursor:pointer;">إعادة المحاولة</button>
+        </div>
+    </div>
+
+    <script>
+        // قاعدة بيانات الأسئلة (يمكنك إضافة مئات الأسئلة هنا)
+        const questions = [
+            {
+                q: "ما هو المصدر الأول للقانون في الجزائر؟",
+                options: ["العرف", "التشريع", "مبادئ الشريعة", "القضاء"],
+                answer: 1 // الترتيب يبدأ من 0 (التشريع هو الخيار الثاني)
+            },
+            {
+                q: "القاعدة القانونية تتميز بأنها:",
+                options: ["اختيارية", "عامة ومجردة", "خاصة", "نصيحة"],
+                answer: 1
+            },
+            {
+                q: "متى يكتسب الشخص الشخصية القانونية؟",
+                options: ["ببلوغ 19 سنة", "بتمام ولادته حياً", "عند الزواج", "عند التوظيف"],
+                answer: 1
+            },
+            {
+                q: "السلطة التي تسن القوانين هي:",
+                options: ["السلطة التنفيذية", "السلطة القضائية", "السلطة التشريعية", "الصحافة"],
+                answer: 2
+            },
+            {
+                q: "القانون العام ينظم العلاقات التي تكون الدولة طرفاً فيها باعتبارها:",
+                options: ["تاجر", "صاحبة السيادة", "شخص عادي", "وسيط"],
+                answer: 1
+            },
+            // ... أضف المزيد من الأسئلة هنا ...
+            {
+                q: "الجزاء في القاعدة القانونية هو جزاء:",
+                options: ["دنيوي حال", "آخروي", "معنوي فقط", "اختياري"],
+                answer: 0
+            },
+            {
+                q: "من عيوب العرف:",
+                options: ["سريع التكوين", "مكتوب وواضح", "صعوبة الإثبات", "سهولة التعديل"],
+                answer: 2
+            },
+            {
+                q: "الغاء القانون القديم بقانون جديد يسمى:",
+                options: ["النسخ", "التعديل", "الإلغاء", "التجميد"],
+                answer: 2
+            },
+            {
+                q: "القانون الدستوري هو فرع من فروع:",
+                options: ["القانون الخاص", "القانون العام", "القانون المختلط", "القانون الجنائي"],
+                answer: 1
+            },
+            {
+                q: "سن الرشد في القانون الجزائري هو:",
+                options: ["18 سنة", "19 سنة", "21 سنة", "20 سنة"],
+                answer: 1
+            },
+            {
+                q: "من خصائص القاعدة القانونية أنها قاعدة:",
+                options: ["اجتماعية", "فردية", "نفسية", "بيولوجية"],
+                answer: 0
+            }
+        ];
+
+        let currentStreak = 0;
+        let availableQuestions = [...questions]; // نسخة للعمل عليها
+
+        function loadQuestion() {
+            // إذا انتهت الأسئلة نعيد تحميلها
+            if (availableQuestions.length === 0) availableQuestions = [...questions];
+
+            // اختيار سؤال عشوائي
+            const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+            const currentQ = availableQuestions[randomIndex];
+            
+            // حذف السؤال المختار حتى لا يتكرر فوراً
+            availableQuestions.splice(randomIndex, 1);
+
+            document.getElementById("question").innerText = currentQ.q;
+            const optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = "";
+
+            currentQ.options.forEach((opt, index) => {
+                const btn = document.createElement("button");
+                btn.className = "option-btn";
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(index, currentQ.answer, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIndex, correctIndex, btnElement) {
+            const buttons = document.querySelectorAll(".option-btn");
+            
+            // تعطيل الأزرار لمنع الضغط المتكرر
+            buttons.forEach(b => b.disabled = true);
+
+            if (selectedIndex === correctIndex) {
+                // إجابة صحيحة
+                btnElement.classList.add("correct");
+                currentStreak++;
+                document.getElementById("streakNum").innerText = currentStreak;
+
+                // التحقق من الوصول لـ 10
+                if (currentStreak >= 10) {
+                    setTimeout(showCongrats, 500);
+                } else {
+                    setTimeout(loadQuestion, 1000);
+                }
+            } else {
+                // إجابة خاطئة
+                btnElement.classList.add("wrong");
+                buttons[correctIndex].classList.add("correct"); // إظهار الصحيحة
+                currentStreak = 0; // تصفير العداد
+                document.getElementById("streakNum").innerText = currentStreak;
+                setTimeout(loadQuestion, 1500);
+            }
+        }
+
+        function showCongrats() {
+            // تجهيز رسالة التيليجرام
+            const username = "Mouuha_dje";
+            const message = "مرحبا استاذ محمد لقد اتممت مرحلة الكويز شكرا جزيلا على هذه الفعالية وفي اخر الرسالة مكتوب ارسلها لستكمل اجراء الحصول على تهنئة خاصة";
+            const telegramUrl = `https://t.me/${username}?text=${encodeURIComponent(message)}`;
+            
+            document.getElementById("telegramLink").href = telegramUrl;
+            
+            // إظهار النافذة
+            document.getElementById("congratsModal").style.display = "flex";
+        }
+
+        // بدء اللعبة
+        loadQuestion();
+
+    </script>
+</body>
+</html>

@@ -26,10 +26,10 @@ body {
     transition: 0.3s;
 }
 
-/* Navbar */
+/* Navbar & Logo */
 .navbar {
     background: var(--navbar-bg);
-    padding: 15px 5%;
+    padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,24 +39,43 @@ body {
     border-bottom: 2px solid var(--accent);
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 50px; /* حجم الشعار */
+    width: auto;
+}
+
+.logo-text {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
 .nav-links { list-style: none; display: flex; gap: 20px; }
 .nav-links a { text-decoration: none; color: var(--text-main); font-weight: bold; }
-.logo { color: var(--primary); font-size: 1.5rem; font-weight: 900; }
 .theme-btn { background: none; border: 1px solid var(--text-main); color: var(--text-main); border-radius: 50%; padding: 5px 10px; cursor: pointer; }
 
-/* Hero */
+/* Hero Section (تمت إعادة الخلفية هنا) */
 .hero {
+    /* رابط صورة الخلفية */
     background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    background-attachment: fixed; /* تأثير جميل عند التمرير */
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
 }
-.hero-overlay { background: rgba(0,0,0,0.7); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.hero-overlay { background: rgba(13, 19, 60, 0.8); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
 .hero h1 { font-size: 3rem; margin: 10px 0; }
 
 /* Search */

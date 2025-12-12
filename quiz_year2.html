@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>كويز السنة الثانية | SWIMA</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background-color: #f0f2f5; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px 0; }
@@ -27,12 +27,14 @@
         .logo-img { width: 100px; margin-bottom: 15px; }
         
         .poetic-text {
-            font-family: 'Aref Ruqaa', serif;
-            font-size: 1.3rem;
-            line-height: 2.2;
+            /* تم تغيير الخط هنا إلى الأميري ليكون واضحاً جداً */
+            font-family: 'Amiri', serif; 
+            font-size: 1.4rem; /* تكبير الخط قليلاً للوضوح */
+            line-height: 2.0;
             color: #333;
             text-align: justify;
             text-align-last: center;
+            font-weight: 500;
         }
 
         /* الكلمات القانونية باللون الأحمر */
@@ -60,7 +62,7 @@
         .option-btn.correct { background: #c8e6c9; border-color: #2e7d32; color: #2e7d32; }
         .option-btn.wrong { background: #ffcdd2; border-color: #c62828; color: #c62828; }
         
-        .back-home { position: absolute; top: 20px; right: 20px; text-decoration: none; color: #555; font-size: 1.2rem; }
+        .back-home { position: absolute; top: 20px; right: 20px; text-decoration: none; color: #555; font-size: 1.2rem; font-family: 'Tajawal'; font-weight: bold;}
 
         /* نافذة التهنئة */
         .special-modal {
@@ -90,7 +92,7 @@
     <div class="intro-card">
         <img src="logo.jpg" alt="SWIMA" class="logo-img">
         <div class="poetic-text">
-            اغتنم ساعة في <span class="legal-term">طلب العلم</span> و الجلوس في مجالس العلم و لن تدرك قيمتها الا بعد زوالها فاجعل من طلب العلم مفهوما و الجلوس و الاستماع <span class="legal-term">ركنا</span> و الاحترام <span class="legal-term">شرطا</span> و عدم الحظور يقيم عليك <span class="legal-term">المسؤولية التقصيرية</span> و الانتظام يمنحك <span class="legal-term">صفة الطالب</span> و النقاش يضفي عليك <span class="legal-term">صفة الباحث</span> و المكالمات المرئية هي <span class="legal-term">اثراء بلا سبب</span> و تقديرك لمن يعطيك معلومة يحل محل <span class="legal-term">الشرط الفاسخ</span> و كذا ملازمة المراجعة تعفيك من الوقوع في <span class="legal-term">عبئ الاثبات</span> و سهر في ما لا ينفعك يترتب يحل محل <span class="legal-term">العلاقة السببية</span> و المماطلة و الكسل <span class="legal-term">عيب من عيوب الارادة</span> وكذا صلاة وذكر في وقته يكسبك <span class="legal-term">حرية الاثبات</span> و زدها يا زميلي الاعتكاف على البحث كـ <span class="legal-term">العقد شريعة المتعاقدين</span> و ان كانت <span class="legal-term">الضروف الطارئة</span> تعفي من <span class="legal-term">المسؤولية</span> فجهلك بـ <span class="legal-term">الاجرائات</span> هو المصيبة الاكبر فهي <span class="legal-term">ركن الشكلية</span> و دعني احدثك عن تلك الام فقدت ولدها فحزنت حتى <span class="legal-term">فقدت اهليتها</span> و قيل في من قال ان الطالب الذي يبحث عن الشهادة فقط لم يحسن اختيار موضوع بحثه و المفاجاة الكبرى هي ان <span class="legal-term">الاجال</span> خط احمر فان انقضت لا سبيل لـ <span class="legal-term">طعن</span> الا مانص عليه كـ <span class="legal-term">استثناء</span> و اين <span class="legal-term">النص</span> ان كان مركزك قد مر الزمان عليه حتى وقع عليك <span class="legal-term">مبدا الاثر الفوري</span> و ان سلمت نفسك لاستاذك و تمعنت حتى وان فاتتك تدوين الملاحظات فان كنت تعتقد انه عندما ينهرك استاذك بعبارة و انت تاخذك الحمية و تعتقد انك في حالة <span class="legal-term">الدفاع الشرعي</span> فاذكرك يا زميلي انه فعله كان <span class="legal-term">مشروعا</span> وهو ما امرت و مااذنت به به العادة فـ <span class="legal-term">الاصل في الافعال الاباحة</span> الا تتفق معي فسلوك الاستاذ نحوك كان ايجابي فانظر من زاوية اخرى فيا زميلي لك من اطيب التحيات ونسال الله ان يوفقكم و يرزقكم الفهم و <span class="legal-term">موانع العقاب</span> في السر والعلن.
+            اغتنم ساعة في <span class="legal-term">طلب العلم</span> و الجلوس في مجالس العلم و لن تدرك قيمتها الا بعد زوالها، فاجعل من طلب العلم مفهوماً، و الجلوس و الاستماع <span class="legal-term">ركناً</span>، و الاحترام <span class="legal-term">شرطاً</span>. وعدم الحضور يقيم عليك <span class="legal-term">المسؤولية التقصيرية</span>، و الانتظام يمنحك <span class="legal-term">صفة الطالب</span>، و النقاش يضفي عليك <span class="legal-term">صفة الباحث</span>. المكالمات المرئية هي <span class="legal-term">إثراء بلا سبب</span>، و تقديرك لمن يعطيك معلومة يحل محل <span class="legal-term">الشرط الفاسخ</span>. وكذا ملازمة المراجعة تعفيك من الوقوع في <span class="legal-term">عبء الإثبات</span>، والسهر فيما لا ينفعك يحل محل <span class="legal-term">العلاقة السببية</span>، والمماطلة والكسل <span class="legal-term">عيب من عيوب الإرادة</span>. وكذا صلاة وذكر في وقته يكسبك <span class="legal-term">حرية الإثبات</span>. وزدها يا زميلي الاعتكاف على البحث كـ <span class="legal-term">العقد شريعة المتعاقدين</span>. وإن كانت <span class="legal-term">الظروف الطارئة</span> تعفي من <span class="legal-term">المسؤولية</span> فجهلك بـ <span class="legal-term">الإجراءات</span> هو المصيبة الكبرى فهي <span class="legal-term">ركن الشكلية</span>. دعني أحدثك عن تلك الأم التي فقدت ولدها فحزنت حتى <span class="legal-term">فقدت أهليتها</span>. وقيل في من قال إن الطالب الذي يبحث عن الشهادة فقط لم يحسن اختيار موضوع بحثه. والمفاجأة الكبرى هي أن <span class="legal-term">الآجال</span> خط أحمر فإن انقضت لا سبيل لـ <span class="legal-term">طعن</span> إلا ما نص عليه كـ <span class="legal-term">استثناء</span>. وأين <span class="legal-term">النص</span> إن كان مركزك قد مر الزمان عليه حتى وقع عليك <span class="legal-term">مبدأ الأثر الفوري</span>. وإن سلمت نفسك لأستاذك وتمعنت حتى وإن فاتتك تدوين الملاحظات، فإن كنت تعتقد أنه عندما ينهرك أستاذك بعبارة وتأخذك الحمية وتعتقد أنك في حالة <span class="legal-term">الدفاع الشرعي</span>، فأذكرك يا زميلي أن فعله كان <span class="legal-term">مشروعاً</span> وهو ما أمرت وأذنت به العادة، فـ <span class="legal-term">الأصل في الأفعال الإباحة</span>. ألا تتفق معي؟ فسلوك الأستاذ نحوك كان إيجابياً فانظر من زاوية أخرى. فيا زميلي لك مني أطيب التحيات ونسأل الله أن يوفقكم ويرزقكم الفهم و <span class="legal-term">موانع العقاب</span> في السر والعلن.
         </div>
     </div>
 

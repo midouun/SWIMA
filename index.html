@@ -1,167 +1,154 @@
 <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIMA | منصة الطالب جمعة محمد عرفات</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-<html lang="ar" dir="rtl"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>SWIMA | البوابة القانونية</title> <link rel="stylesheet" href="style.css"> <link href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DTajawal:wght%40400%3B700%3B900%26display%3Dswap" rel="stylesheet"> <link rel="stylesheet" href="https://www.google.com/search?q=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> </head> <body>
+    <button onclick="topFunction()" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
 
-<button onclick="topFunction()" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="SWIMA" class="nav-logo">
+            <span class="logo-text">SWIMA</span>
+        </div>
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="#forum">منتدى الطالب</a></li>
+                <li><a href="#schedule">الرزنامة</a></li>
+                <li><a href="#judicial-map">المحاكم</a></li>
+                <li><a href="#rules">القانون</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
 
-<nav class="navbar">
-    <div class="logo-container">
-        <img src="logo.png" alt="SWIMA" class="nav-logo">
-        <span class="logo-text">SWIMA</span>
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <span class="badge">السنة الجامعية 2025/2026</span>
+                <h1>منصة SWIMA القانونية</h1>
+                <p>بإشراف الطالب الباحث: <strong>جمعة محمد عرفات</strong></p>
+                
+                <div class="social-hero">
+                    <a href="https://t.me/YOUR_LINK" target="_blank" class="social-btn telegram">
+                        <i class="fab fa-telegram-plane"></i> تيليجرام
+                    </a>
+                    <a href="https://instagram.com/YOUR_LINK" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i> انستغرام
+                    </a>
+                    <a href="https://facebook.com/YOUR_LINK" target="_blank" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i> فيسبوك
+                    </a>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="ابحث عن مقياس أو ملخص...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="ticker-wrap">
+        <div class="ticker-title">مبادئ قانونية:</div>
+        <div class="ticker-content" id="legalTicker">جاري التحميل...</div>
     </div>
-    <div class="nav-content">
-        <ul class="nav-links">
-            <li><a href="#schedule">الرزنامة</a></li>
-            <li><a href="#judicial-map">المحاكم</a></li>
-            <li><a href="#rules">القانون الداخلي</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-        <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
-    </div>
-</nav>
 
-<header class="hero">
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <span class="badge">السنة الجامعية 2025/2026</span>
-            <h1>موسوعة SWIMA التعليمية</h1>
-            <p>شروحات قانونية مبسطة بإشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
-            <div class="contact-hero" id="contact">
-                <a href="#" class="btn-hero telegram"><i class="fab fa-telegram-plane"></i> القناة الرسمية</a>
-                <a href="#" class="btn-hero facebook"><i class="fab fa-facebook-f"></i> صفحة الفيسبوك</a>
-                <a href="mailto:contact@swima.dz" class="btn-hero email"><i class="fas fa-envelope"></i> تواصل معنا</a>
+    <main class="container">
+
+        <section id="forum">
+            <div class="section-header">
+                <h2>🎓 منتدى الطالب الجامعي</h2>
+                <div class="line"></div>
+                <p>فضاء تفاعلي للنقاش العلمي وتبادل الخبرات</p>
             </div>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس (مثال: مدني)...">
-                <button><i class="fas fa-search"></i></button>
+            
+            <div class="forum-grid">
+                <div class="forum-card year-1">
+                    <div class="card-icon"><i class="fas fa-university"></i></div>
+                    <h3>السنة الأولى</h3>
+                    <p>الجذع المشترك</p>
+                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="forum-card year-2">
+                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>السنة الثانية</h3>
+                    <p>أساس التخصص</p>
+                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="forum-card year-3-pub">
+                    <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                    <h3>السنة الثالثة</h3>
+                    <p>قانون عام</p>
+                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="forum-card year-3-priv">
+                    <div class="card-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>السنة الثالثة</h3>
+                    <p>قانون خاص</p>
+                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                </div>
             </div>
-        </div>
-    </div>
-</header>
+        </section>
 
-<div class="ticker-wrap">
-    <div class="ticker-title"><i class="fas fa-balance-scale"></i> دراسات قانونية:</div>
-    <div class="ticker-content" id="legalTicker">جاري تحميل المبادئ...</div>
-</div>
-
-<main class="container">
-    
-    <section id="schedule">
-        <div class="section-header">
-            <h2> رزنامة التوقيت الدراسي</h2>
-            <div class="line"></div>
-            <p class="schedule-note">الدراسة تنطلق مساءً ابتداءً من الساعة 19:00</p>
-        </div>
-        
-        <div class="schedule-card">
-            <h3>السنة الأولى ليسانس</h3>
-            <div class="table-responsive">
-                <table class="swima-table">
-                    <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                    <tbody>
-                        <tr><td>الأحد</td><td>19:00 - 20:30</td><td>مدخل للعلوم القانونية</td></tr>
-                        <tr><td>الأربعاء</td><td>19:00 - 20:30</td><td>التنظيم القضائي</td></tr>
-                        <tr><td>السبت</td><td>21:00 - 22:30</td><td>القانون الدستوري</td></tr>
-                    </tbody>
-                </table>
+        <section id="schedule">
+            <div class="section-header">
+                <h2>📅 رزنامة التوقيت الدراسي</h2>
+                <div class="line"></div>
             </div>
-            <p class="note-text">* مقياس "تاريخ النظم" يُقدم كفيديوهات مجانية. حصص المنهجية إضافية (الخميس أو السبت).</p>
-        </div>
-
-        <div class="schedule-card">
-            <h3>السنة الثانية ليسانس</h3>
-            <div class="table-responsive">
-                <table class="swima-table">
-                    <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                    <tbody>
-                        <tr><td>الاثنين</td><td>19:00 - 20:30</td><td>القانون المدني</td></tr>
-                        <tr><td>الخميس</td><td>19:00 - 20:30</td><td>قانون العقوبات (القسم العام)</td></tr>
-                        <tr><td>الثلاثاء</td><td>21:00 - 22:30</td><td>القانون التجاري</td></tr>
-                    </tbody>
-                </table>
+            <div class="schedule-card">
+                <h3>السنة الأولى ليسانس</h3>
+                <div class="table-responsive">
+                    <table class="swima-table">
+                        <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
+                        <tbody>
+                            <tr><td>الأحد</td><td>19:00 - 20:30</td><td>مدخل للعلوم القانونية</td></tr>
+                            <tr><td>الأربعاء</td><td>19:00 - 20:30</td><td>التنظيم القضائي</td></tr>
+                            <tr><td>السبت</td><td>21:00 - 22:30</td><td>القانون الدستوري</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <p class="note-text">* مقياس "قانون الأسرة" يُقدم كفيديوهات مجانية.</p>
-        </div>
+            </section>
 
-        <div class="schedule-card">
-            <h3>السنة الثالثة (قانون عام)</h3>
-            <div class="table-responsive">
-                <table class="swima-table">
-                    <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                    <tbody>
-                        <tr><td>الثلاثاء</td><td>19:00 - 20:30</td><td>قانون العلاقات الدولية</td></tr>
-                        <tr><td>الاثنين</td><td>21:00 - 22:30</td><td>قانون الوظيفة العمومية</td></tr>
-                        <tr><td>الخميس</td><td>21:00 - 22:30</td><td>القرارات والعقود الإدارية</td></tr>
-                    </tbody>
-                </table>
+        <section id="judicial-map">
+            <div class="section-header">
+                <h2>🏛️ الخريطة القضائية</h2>
+                <div class="line"></div>
             </div>
-        </div>
-
-        <div class="schedule-card">
-            <h3>السنة الثالثة (قانون خاص)</h3>
-            <div class="table-responsive">
-                <table class="swima-table">
-                    <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
-                    <tbody>
-                        <tr><td>السبت</td><td>19:00 - 20:30</td><td>القانون الدولي الخاص</td></tr>
-                        <tr><td>الأحد</td><td>21:00 - 22:30</td><td>الشركات التجارية</td></tr>
-                        <tr><td>الأربعاء</td><td>21:00 - 22:30</td><td>العقود الخاصة</td></tr>
-                    </tbody>
-                </table>
+            <div class="judicial-map-box">
+                <p>اختر المجلس القضائي (بحث سريع عبر خرائط جوجل):</p>
+                <select id="courtsDropdown" onchange="if(this.value) window.open(this.value, '_blank')">
+                    <option value="">-- جاري تحميل القائمة... --</option>
+                </select>
             </div>
-            <p class="note-text">* مقياس "المواريث" و"طرق التنفيذ" ستوضع لاحقاً كفيديوهات وملخصات.</p>
-        </div>
-    </section>
+        </section>
 
-    <section id="judicial-map">
-        <div class="section-header">
-            <h2>️ الخريطة القضائية والمراجع</h2>
-            <div class="line"></div>
-        </div>
-        
-        <div class="ref-grid">
-            <a href="https://www.joradp.dz/HAR/Index.htm" target="_blank" class="ref-card">
-                <div class="ref-icon"><i class="fas fa-newspaper"></i></div>
-                <h3>الجريدة الرسمية</h3>
-            </a>
-            <a href="https://coursupreme.dz/" target="_blank" class="ref-card">
-                <div class="ref-icon"><i class="fas fa-gavel"></i></div>
-                <h3>المحكمة العليا</h3>
-            </a>
-            <a href="https://www.conseildetat.dz/" target="_blank" class="ref-card">
-                <div class="ref-icon"><i class="fas fa-landmark"></i></div>
-                <h3>مجلس الدولة</h3>
-            </a>
-            <a href="https://asjp.cerist.dz/" target="_blank" class="ref-card">
-                <div class="ref-icon"><i class="fas fa-book-reader"></i></div>
-                <h3>بوابة ASJP</h3>
-            </a>
-        </div>
-        <br>
-        <div class="judicial-map-box">
-            <p>اختر المجلس القضائي (بحث مباشر عبر خرائط جوجل لضمان الوصول):</p>
-            <select id="courtsDropdown" onchange="if(this.value) window.open(this.value, '_blank')">
-                <option value="">-- جاري تحميل قائمة الـ 58 ولاية... --</option>
-            </select>
-        </div>
-    </section>
+        <section id="rules" class="rules-section">
+            <div class="section-header">
+                <h2>📜 القانون الداخلي (50 مادة)</h2>
+                <div class="line"></div>
+            </div>
+            <div class="rules-scroll-box" id="rulesContainer">
+                <p style="text-align:center;">جاري جلب القانون الكامل...</p>
+            </div>
+        </section>
 
-    <section id="rules" class="rules-section">
-        <div class="section-header">
-            <h2> القانون الداخلي والنظام الأساسي</h2>
-            <div class="line"></div>
-            <p>السنة الجامعية 2025/2026</p>
-        </div>
-        <div class="rules-scroll-box" id="rulesContainer">
-            <p style="text-align:center;">جاري جلب مواد القانون...</p>
-        </div>
-    </section>
+    </main>
 
-</main>
+    <footer id="about">
+        <p>SWIMA Project © 2026 | تطوير: <strong>جمعة محمد عرفات</strong></p>
+    </footer>
 
-<footer id="about">
-    <p>SWIMA Project © 2026 | جميع الحقوق محفوظة</p>
-</footer>
-
-<script src="script.js"></script>
-</body> </html>
+    <script src="script.js"></script>
+</body>
+</html>

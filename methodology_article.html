@@ -3,186 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منهجية التعليق على مادة قانونية | SWIMA</title>
+    <title>منهجية التعليق على مادة قانونية</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #e0e0e0; }
-        .paper-container {
-            max-width: 850px; margin: 40px auto; background: white; padding: 60px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 5px; position: relative;
-        }
-        .paper-header {
-            display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 30px;
-            font-family: 'Times New Roman', serif;
-        }
+        body { background-color: #f0f2f5; }
+        .paper-container { max-width: 850px; margin: 40px auto; background: white; padding: 60px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 5px; }
+        .paper-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1a237e; padding-bottom: 20px; margin-bottom: 30px; font-family: 'Times New Roman', serif; }
         .header-text { font-size: 0.9rem; color: #555; text-align: center; }
         .logo-center { width: 80px; height: auto; }
-        h1.doc-title {
-            text-align: center; font-family: 'Amiri', serif; color: var(--primary);
-            font-size: 1.8rem; margin-bottom: 10px; text-decoration: underline; text-underline-offset: 10px;
-        }
-        .section-title {
-            color: #b71c1c; font-family: 'Tajawal', sans-serif; font-size: 1.3rem;
-            font-weight: bold; margin-top: 30px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;
-            text-align: right;
-        }
+        .doc-title { text-align: center; font-family: 'Amiri', serif; color: #000; font-size: 2rem; margin-bottom: 20px; text-decoration: underline; }
+        .section-header { text-align: right; font-family: 'Tajawal'; font-size: 1.3rem; font-weight: bold; margin-top: 30px; text-decoration: underline; color: #b71c1c; }
         .content-text { font-family: 'Amiri', serif; font-size: 1.15rem; line-height: 1.8; color: #000; text-align: justify; }
         .sub-point { color: #2e7d32; font-weight: bold; margin-top: 15px; display: block; }
-        ul { list-style-type: disc; margin-right: 20px; }
-        .example-box { background: #f0f4c3; padding: 15px; border-right: 5px solid #827717; margin: 20px 0; border-radius: 5px; }
-        .footer-signature {
-            margin-top: 50px; text-align: center; font-weight: bold; border-top: 2px solid #333;
-            padding-top: 20px; font-family: 'Times New Roman', serif; text-transform: uppercase;
-        }
-        .back-btn {
-            position: fixed; bottom: 20px; left: 20px; background: var(--primary); color: white;
-            padding: 10px 20px; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 100;
-        }
+        .example-box { background: #f9fbe7; padding: 15px; border-right: 5px solid #827717; margin: 15px 0; }
+        .back-btn { position: fixed; bottom: 20px; left: 20px; background: var(--primary); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .back-btn:hover { background: var(--accent); color: black; }
     </style>
 </head>
 <body>
-    <a href="methodology_hub.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للبوابة</a>
+    <a href="methodology_hub.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة</a>
     
     <div class="paper-container">
         <div class="paper-header">
-            <div class="header-text">spécialité droit<br>niveau licence<br>(1ére, 2éme,3éme anné)</div>
-            <img src="logo.png" alt="SWIMA LOGO" class="logo-center">
+            <div class="header-text">spécialité droit<br>Niveau licence<br>(1ére, 2éme, 3 éme anné)</div>
+            
+            <img src="logo.jpg" alt="SWIMA LOGO" class="logo-center">
+            
             <div class="header-text">تخصص الحقوق<br>طور الليسانس<br>( سنة أولى وثانية وثالثة )</div>
         </div>
 
-        <h1 class="doc-title">منهجية التعليق على نص قانوني ( مادة قانونية )</h1>
+        <h1 class="doc-title">منهجية التعليق على نص قانوني (مادة قانونية)</h1>
 
         <div class="content-text">
-            
-            <div class="section-title">أولاً - التحليل الشكلي</div>
-            
-            <span class="sub-point">1- طبيعة النص : وإما أن يكون:</span>
-            <ul>
-                <li><strong>نص تشريعي :</strong> وهو كل نص صادر عن سلطة التشريع(البرلمان أو المجلس الشعبي الوطني في الجزائر )وفق الدستور، ويهدف إلى وضع قواعد عامة وملزمة تنظم الحقوق والواجبات.</li>
-                <li><strong>أو نص تنظيمي :</strong> وهو كل نص صادر عن السلطة التنفيذية(الحكومة أو الوزير المختص )لتنفيذ أو تفصيل القانون، ويهدف إلى تنظيم كيفية تطبيق القوانين على أرض الواقع.</li>
-            </ul>
+            <div class="section-header">أولاً - التحليل الشكلي</div>
 
-            <span class="sub-point">2- موقع النص :</span>
-            <ul>
-                <li><strong>تحديد القانون أو الأمر المتضمن للنص:</strong> أي ذكر رقم القانون أو الأمر وتاريخ صدوره ونشره في الجريدة الرسمية.</li>
-                <li><strong>تحديد الكتاب أو القسم العام للقانون:</strong> أي ذكر الباب أو الكتاب الذي ينتمي إليه النص ضمن بنية القانون.</li>
-                <li><strong>تحديد الفصل أو القسم الفرعي:</strong> أي الإشارة للقسم الفرعي أو الفصل الذي تنتمي إليه المادة.</li>
-            </ul>
+            <span class="sub-point">1- طبيعة النص:</span>
+            <p>إما أن يكون <strong>نص تشريعي</strong> (صادر عن البرلمان) أو <strong>نص تنظيمي</strong> (صادر عن السلطة التنفيذية).</p>
+
+            <span class="sub-point">2- موقع النص:</span>
+            <p>تحديد القانون (رقمه وتاريخه)، الكتاب، الباب، الفصل.</p>
             <div class="example-box">
-                ● <strong>مثال :</strong><br>
-                -المادة 220 من القانون رقم 16-06 المؤرخ في 23 يونيو 2006 والمتضمن قانون العقوبات الجزائري، والمنشور في الجريدة الرسمية رقم 39 بتاريخ 24 يونيو 2006<br>
-                -تقع ضمن الكتاب الثاني المتعلق بالجرائم والعقوبات وتندرج تحت الباب الأول منه الخاص بالجرائم ضد الأشخاص.<br>
-                -وبالتحديد ضمن الفصل الثاني المتعلق بالجرائم المرتكبة ضد الحياة.
+                <strong>مثال:</strong> المادة 220 من قانون العقوبات... تقع ضمن الكتاب الثاني... الباب الأول... الفصل الثاني.
             </div>
 
-            <span class="sub-point">3- الظروف المحيطة بالنص :</span>
-            <p>وهنا نذكر مناسبة صدور هذا النص، فإن كان تعديل للقانون الذي تضمنه نذكر مناسبة ذلك التعديل مع شرح بسيط للأسباب الذي دفعت المشرع للقيام به، ونفس الشيء بالنسبة لصدور القانون لأول مرة.</p>
+            <span class="sub-point">3- الظروف المحيطة:</span>
+            <p>مناسبة صدور النص أو تعديله.</p>
 
-            <span class="sub-point">4- البناء المطبعي :</span>
-            <p>نذكر رقم المادة، ثم نذكر كم فقرة فيها وكل فقرة من أين تبدأ و أين تنتهي.</p>
+            <span class="sub-point">4- البناء المطبعي:</span>
+            <p>رقم المادة، عدد الفقرات (من أين تبدأ وأين تنتهي).</p>
 
-            <span class="sub-point">5- البناء اللغوي والنحوي :</span>
-            <p>وهنا نتحدث عن الأسلوب الذي كتبت به المادة من حيث الكلمات، الجمل، الربط بين الأفكار، وقواعد اللغة الصحيحة، لضمان وضوح النص ودقته القانونية.</p>
-            <p>● <strong>مثلاً :</strong><br> [المادة مكتوبة بلغة واضحة ودقيقة، / أو صعبة وغامضة لايفهمها إلا أصحاب القانون ، ( ونذكروا بعض الكلمات القانونية المستعملة ) ، والفقرات فيها مفصولة بشكل منطقي، والصياغة نحوية صحيحة ورسمية].</p>
+            <span class="sub-point">5- البناء اللغوي والنحوي:</span>
+            <p>الأسلوب (واضح/غامض)، المصطلحات المستعملة. <em>مثلاً: المادة مكتوبة بلغة واضحة ودقيقة...</em></p>
 
             <span class="sub-point">6- البناء المنطقي:</span>
-            <p>نشير هنا إلى تسلسل الأفكار وترابطها في المادة ، ثم نستخرج بعض المصطلحات الصعبة إن وجدت ونقوم بشرحها.</p>
+            <p>تسلسل الأفكار وترابطها وشرح المصطلحات الصعبة.</p>
 
-            <div class="section-title">ثانياً - التحليل الموضوعي</div>
+            <div class="section-header">ثانياً - التحليل الموضوعي</div>
+            <span class="sub-point">1- تحليل المضمون:</span>
+            <p>استخراج الفكرة الأساسية والأفكار الفرعية.</p>
+            <span class="sub-point">2- الإشكالية:</span>
+            <p>طرح المشكل القانوني المرتبط بالمادة.</p>
+            <span class="sub-point">3- التصريح بالخطة:</span>
+            <p>(مقدمة، مبحثين، خاتمة).</p>
 
-            <span class="sub-point">1- تحليل مضمون النص:</span>
-            <p>اي فهم محتوى المادة و ما المقصود منها ، بعبارة أخرى استخراج الفكرة الأساسية أو العامة للمادة ثم الأفكار الفرعية المرتبطة بها.</p>
+            <hr style="margin:30px 0;">
 
-            <span class="sub-point">2- تحديد الإشكالية:</span>
-            <p>هُنا وبعد تحليل مضمون المادة نقوم بطرح المشكل القانوني المرتبط بموضوع تلك المادة.</p>
-
-            <span class="sub-point">3- التصريح بخطة البحث:</span>
-            <p>حيث نعالج المشكل القانوني المطروح عن طريق الخطة المصرح بها، والتي تكون عبارة عن مباحث ومطالب بالشكل التالي:</p>
-            <div style="text-align: center; margin: 20px;">
-                -تمهيد بسيط<br>
-                -المبحث الأول.... :<br>
-                المطلب الأول.... :<br>
-                المطلب الثاني.... :<br>
-                -المبحث الثاني.... :<br>
-                المطلب الأول.... :<br>
-                المطلب الثاني.... :<br>
-                -الخاتمة
+            <h2 style="text-align:center;">مثال تطبيقي: المادة 19 من القانون المدني</h2>
+            <div class="example-box" style="background:#e8eaf6; border-color:#1a237e;">
+                <strong>نص المادة:</strong> «تخضع التصرفات القانونية في جانبها الشكلي لقانون المكان الذي تمت فيه...»
             </div>
 
-            <hr style="margin: 40px 0; border-top: 3px double #333;">
+            <span class="sub-point">أولاً: التحليل الشكلي</span>
+            <p><strong>1. الطبيعة:</strong> نص تشريعي.<br>
+            <strong>2. الموقع:</strong> القانون المدني (الأمر 58-75)، الكتاب الأول، الأحكام العامة.<br>
+            <strong>3. البناء المطبعي:</strong> فقرتين.<br>
+            <strong>4. البناء المنطقي:</strong> تبدأ بالقاعدة العامة (بلد الإبرام) ثم الاستثناءات.</p>
 
-            <div class="section-title" style="text-align: center; color: var(--primary);">مثال تطبيقي</div>
-            
-            <p style="text-align: center; font-weight: bold;">التعليق على المادة 19 من القانون المدني الجزائري</p>
-            <p class="example-box" style="background: #fff; border: 1px solid #ccc;">
-                <strong>نص المادة :</strong> «تخضع التصرفات القانونية في جانبها الشكلي لقانون المكان الذي تمت فيه ويجوز أيضا أن تخضع لقانون الموطن المشترك للمتقاعدين أو لقانونهما الوطني المشترك أو للقانون الذي يسري على أحكامها الموضوعية»
-            </p>
-
-            <div class="section-title">أولاً - التحليل الشكلي</div>
-            
-            <span class="sub-point">1.طبيعة النص</span>
-            <p>المادة 19 هي نص تشريعي لأنها جزء من القانون المدني الجزائري.</p>
-            
-            <span class="sub-point">2.موقع النص</span>
-            <p>تندرج هذه المادة في القانون المدني الجزائري الصادر بالأمر رقم 58 -75 بتاريخ 26 سبتمبر، 1975 والمعدّل والمتمّم بالقانون رقم 05-10 الصادر في 20 جوان 2005.<br>
-            تقع المادة ضمن الكتاب الأول من القانون المدني، تحت عنوان الأحكام العامة.<br>
-            تحديدًا في القسم الذي يتناول تحديد القانون الواجب التطبيق على العقود والتصرفات.</p>
-
-            <span class="sub-point">3.الظروف المحيطة بالنص</span>
-            <p>القانون المدني الجزائري صدر سنة 1975 وتم تعديله سنة 2005.<br>
-            المادة تهدف لضمان أن كل التصرفات القانونية تكون صحيحة من حيث الشكل، خاصة عند وجود أطراف من جنسيات أو مواطن مختلفة، أو عند حدوث العقد في دول مختلفة.</p>
-
-            <span class="sub-point">4.البناء المطبعي</span>
-            <p>المادة 19 تتكون من فقرتين :<br>
-            -تبدأ الفقرة الأولى من" : تخضع التصرفات...حتى...تمت فيه"<br>
-            -تبدأ الفقرة الثانية من" : ويجوز أيضا...حتى...الموضوعية"<br>
-            حيث :<br>
-            تبدأ بالقاعدة العامة :شكل التصرف يخضع لقانون البلد الذي تم فيه.<br>
-            ثم تقدّم استثناءات : يمكن أيضًا تطبيق قانون الموطن أو الجنسية المشتركة للطرفين، أو القانون الذي يحكم موضوع التصرف.</p>
-
-            <span class="sub-point">5.البناء اللغوي والنحوي</span>
-            <p>كُتبت هذه المادة بأسلوب واضح وبسيط حيث نجد اللغة رسمية وواضحة .واستخدم المشرع كلمات قانونية بسيطة مثل "التصرفات القانونية"، "شكلها"، "القانون الموضوعي".</p>
-
-            <span class="sub-point">6.البناء المنطقي</span>
-            <p>القاعدة تبدأ من قانون بلد الإبرام.<br>
-            بعد ذلك تأتي بدائل تعتمد على علاقة الأطراف بالقانون أو القانون الموضوعي.<br>
-            وبالتالي فالجمل متسلسلة بشكل منطقي من القاعدة العامة إلى الاستثناءات، حيث يسهل على القارئ فهم تطبيق المادة.</p>
-
-            <div class="section-title">ثانياً - التحليل الموضوعي</div>
-
-            <span class="sub-point">1.مضمون المادة</span>
-            <p>● الفكرة الأساسية :تحديد القانون الذي يُطبق على شكل التصرفات القانونية.<br>
-            ● الفكرة الفرعية:<br>
-            -القاعدة الأساسية :شكل التصرف يخضع لقانون البلد الذي تم فيه.<br>
-            -إذا كان هناك موطن مشترك أو جنسية مشتركة للطرفين، يمكن تطبيق هذا القانون أيضًا على الشكل.<br>
-            -يمكن أيضًا تطبيق القانون الذي يحكم موضوع التصرف على الشكل.</p>
-
-            <span class="sub-point">2.الإشكالية :</span>
-            <p>مالقانون الواجب التطبيق على شكل التصرفات القانونية؟</p>
-
-            <span class="sub-point">3.خطة البحث</span>
-            <div style="margin-top: 10px;">
-                <strong>تمهيد :</strong><br>
-                أهمية تحديد قانون الشكل للتصرفات القانونية، خاصة في العقود الدولية.<br>
-                <strong>المبحث الأول :قاعدة بلد الإبرام</strong><br>
-                المطلب الأول :معنى مكان الإبرام وكيفية تحديده عمليًا.<br>
-                المطلب الثاني : مزايا قاعدة بلد الإبرام<br>
-                <strong>المبحث الثاني : الاستثناءات البديلة</strong><br>
-                المطلب الأول :استخدام موطن أو جنسية مشتركة للطرفين كقاعدة بديلة.<br>
-                المطلب الثاني :استخدام القانون الموضوعي كبديل، مع ذكر المزايا والمخاطر.<br>
-                <strong>الخاتمة:</strong><br>
-                المادة 19 تحاول تحقيق توازن بين اليقين القانوني ومرونة الأطراف .لكن يبقى هناك بعض الغموض حول تعريف الموطن المشترك وكيفية تطبيق القانون الموضوعي على الشكل.
-            </div>
-
+            <span class="sub-point">ثانياً: التحليل الموضوعي</span>
+            <p><strong>الفكرة الأساسية:</strong> تحديد القانون المطبق على شكل التصرفات.<br>
+            <strong>الإشكالية:</strong> ما القانون الواجب التطبيق على شكل التصرفات القانونية؟<br>
+            <strong>الخطة:</strong><br>
+            - المبحث الأول: قاعدة بلد الإبرام.<br>
+            - المبحث الثاني: الاستثناءات البديلة.</p>
         </div>
-
-        <div class="footer-signature">
-            LAW BY SWIMA
+        <div style="text-align:center; margin-top:50px; font-weight:bold; border-top:2px solid #333; padding-top:20px;">
+            - LAW BY SWIMA -
         </div>
-
     </div>
 </body>
 </html>

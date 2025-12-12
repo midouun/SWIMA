@@ -1,303 +1,86 @@
 :root {
-    --primary: #1a237e; /* كحلي غامق */
-    --secondary: #0d47a1;
-    --accent: #ffca28; /* ذهبي */
-    --text: #333;
-    --light-bg: #f5f7fa;
+    --primary: #1a237e;
+    --accent: #ffca28;
+    --bg-body: #f4f6f9;
+    --bg-card: #ffffff;
+    --text-main: #333;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] {
+    --primary: #5c6bc0;
+    --accent: #ffd54f;
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --navbar-bg: rgba(18, 18, 18, 0.95);
 }
 
 body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
     font-family: 'Tajawal', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: var(--light-bg);
-    color: var(--text);
-    overflow-x: hidden;
+    transition: 0.3s;
 }
 
-/* Navbar */
 .navbar {
-    background: white;
-    padding: 15px 50px;
+    background: var(--navbar-bg);
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent);
 }
 
-.logo {
-    color: var(--primary);
-    font-size: 1.5rem;
-    font-weight: 900;
-}
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--text-main); font-weight: bold; }
+.logo { color: var(--primary); font-size: 1.5rem; font-weight: 900; }
+.theme-btn { background: none; border: 1px solid var(--text-main); color: var(--text-main); border-radius: 50%; padding: 5px 10px; cursor: pointer; }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary);
-}
-
-/* Hero Section - الخلفية */
 .hero {
-    /* رابط صورة مكتبة قانونية */
-    background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
-    height: 85vh; /* ارتفاع الشاشة */
-    position: relative;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
 }
+.hero-overlay { background: rgba(0,0,0,0.7); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.hero h1 { font-size: 3rem; margin: 10px 0; }
 
-.overlay {
-    background: rgba(12, 20, 60, 0.85); /* طبقة زرقاء شفافة فوق الصورة */
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.search-container { background: white; padding: 5px; border-radius: 50px; display: flex; width: 90%; max-width: 500px; margin: 20px auto; }
+.search-container input { flex: 1; border: none; padding: 15px; border-radius: 50px; outline: none; }
+.search-container button { background: var(--primary); color: white; border: none; width: 50px; border-radius: 50%; }
 
-.hero-content {
-    z-index: 1;
-    max-width: 700px;
-    padding: 20px;
-}
+.container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 
-.badge {
-    background-color: var(--accent);
-    color: var(--primary);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin: 10px 0;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    margin-bottom: 30px;
-}
-
-/* شريط البحث */
-.search-box {
-    background: white;
-    padding: 5px;
-    border-radius: 50px;
-    display: flex;
-    max-width: 500px;
-    margin: 0 auto 30px auto;
-}
-
-.search-box input {
-    border: none;
-    padding: 15px 20px;
-    width: 100%;
-    outline: none;
-    border-radius: 50px;
-    font-family: 'Tajawal', sans-serif;
-}
-
-.search-box button {
-    background: var(--primary);
-    color: white;
-    border: none;
-    width: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.search-box button:hover {
-    background: var(--secondary);
-}
-
-.primary-btn {
-    background-color: #0088cc;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.primary-btn:hover {
-    background-color: #0077b5;
-    transform: translateY(-2px);
-}
-
-/* الأقسام */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 50px 20px;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-header h2 {
-    color: var(--primary);
-    font-size: 2rem;
-}
-
-.line {
-    width: 80px;
-    height: 4px;
-    background: var(--accent);
-    margin: 10px auto;
-    border-radius: 2px;
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-/* تصميم البطاقات المطور */
 .card {
-    background: white;
+    background: var(--bg-card);
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.4s;
-    position: relative;
-    overflow: hidden;
-    border-top: 4px solid transparent;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-top: 4px solid var(--accent);
-}
-
-.icon-bg {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-    opacity: 0.8;
-}
-
-.card h3 {
-    margin: 10px 0;
-    font-size: 1.4rem;
-}
-
-.card-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--secondary);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.card-link:hover {
-    color: var(--accent);
-    padding-left: 5px; /* حركة بسيطة للسهم */
-}
-
-/* قسم "عن المشرف" */
-.about-section {
-    background: white;
-    margin-top: 60px;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    padding: 40px;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.about-text {
-    flex: 2;
-}
-
-.achievements {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.achievements li {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #555;
-}
-
-.achievements i {
-    color: var(--accent);
-    margin-left: 10px;
-}
-
-.about-image {
-    flex: 1;
     text-align: center;
-}
-
-.about-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--light-bg);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* الفوتر */
-footer {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 60px;
-}
-
-.social-links a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
+.card:hover { transform: translateY(-10px); border-top: 4px solid var(--accent); }
+.card h3 { color: var(--text-main); }
+.icon-box { color: var(--primary); font-size: 2.5rem; margin-bottom: 15px; }
 
-.social-links a:hover {
-    color: var(--accent);
-}
+.card-btn { display: block; border: 1px solid var(--primary); color: var(--primary); padding: 10px; border-radius: 20px; text-decoration: none; margin-top: 15px; transition: 0.3s; }
+.card-btn:hover { background: var(--primary); color: white; }
+
+.btn-pulse { background: var(--accent); color: #000; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; animation: pulse 2s infinite; }
+
+#scrollTopBtn { display: none; position: fixed; bottom: 30px; left: 30px; background: var(--accent); border: none; padding: 15px; border-radius: 50%; cursor: pointer; }
+
+footer { background: var(--primary); color: white; padding: 40px 0; text-align: center; margin-top: 50px; }
+
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }

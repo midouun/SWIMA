@@ -13,7 +13,7 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
-// 2. المودال
+// 2. المودال (المنتدى)
 const modal = document.getElementById("forumModal");
 function openForumModal(yearName) {
     document.getElementById("modalTitle").innerText = "بوابة المشاركة - " + yearName;
@@ -22,7 +22,7 @@ function openForumModal(yearName) {
 function closeForumModal() { modal.style.display = "none"; }
 window.onclick = function(event) { if (event.target == modal) modal.style.display = "none"; }
 
-// 3. المحاكم
+// 3. جلب المحاكم
 fetch('courts.json')
     .then(response => response.json())
     .then(data => {
@@ -37,7 +37,7 @@ fetch('courts.json')
     })
     .catch(err => console.error(err));
 
-// 4. القانون
+// 4. جلب القانون
 fetch('rules.json')
     .then(response => response.json())
     .then(data => {
@@ -54,7 +54,7 @@ fetch('rules.json')
 
 // 5. الشريط المتحرك
 const tickerElement = document.getElementById('legalTicker');
-const maxims = ["العقد شريعة المتعاقدين", "لا جريمة إلا بنص", "الأصل البراءة", "الشك يفسر لمصلحة المتهم"];
+const maxims = ["العقد شريعة المتعاقدين", "لا جريمة إلا بنص", "الأصل البراءة", "الشك يفسر لمصلحة المتهم", "البينة على من ادعى"];
 let idx = 0;
 setInterval(() => {
     tickerElement.style.opacity = 0;

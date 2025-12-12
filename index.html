@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWIMA | منصة الطالب جمعة محمد عرفات</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -36,13 +36,13 @@
                 <p>بإشراف الطالب الباحث: <strong>جمعة محمد عرفات</strong></p>
                 
                 <div class="social-hero">
-                    <a href="https://t.me/YOUR_LINK" target="_blank" class="social-btn telegram">
+                    <a href="https://t.me/mbsasaaa" target="_blank" class="social-btn telegram">
                         <i class="fab fa-telegram-plane"></i> تيليجرام
                     </a>
-                    <a href="https://instagram.com/YOUR_LINK" target="_blank" class="social-btn instagram">
+                    <a href="#" class="social-btn instagram">
                         <i class="fab fa-instagram"></i> انستغرام
                     </a>
-                    <a href="https://facebook.com/YOUR_LINK" target="_blank" class="social-btn facebook">
+                    <a href="#" class="social-btn facebook">
                         <i class="fab fa-facebook-f"></i> فيسبوك
                     </a>
                 </div>
@@ -66,39 +66,83 @@
             <div class="section-header">
                 <h2>🎓 منتدى الطالب الجامعي</h2>
                 <div class="line"></div>
-                <p>فضاء تفاعلي للنقاش العلمي وتبادل الخبرات</p>
+                <p>فضاء للنقاش العلمي وتبادل الأفكار القانونية</p>
             </div>
             
             <div class="forum-grid">
-                <div class="forum-card year-1">
+                <div class="forum-card year-1" onclick="openForumModal('السنة الأولى')">
                     <div class="card-icon"><i class="fas fa-university"></i></div>
                     <h3>السنة الأولى</h3>
                     <p>الجذع المشترك</p>
-                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
                 </div>
 
-                <div class="forum-card year-2">
+                <div class="forum-card year-2" onclick="openForumModal('السنة الثانية')">
                     <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
                     <h3>السنة الثانية</h3>
                     <p>أساس التخصص</p>
-                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
                 </div>
 
-                <div class="forum-card year-3-pub">
+                <div class="forum-card year-3-pub" onclick="openForumModal('السنة الثالثة عام')">
                     <div class="card-icon"><i class="fas fa-landmark"></i></div>
                     <h3>السنة الثالثة</h3>
                     <p>قانون عام</p>
-                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
                 </div>
 
-                <div class="forum-card year-3-priv">
+                <div class="forum-card year-3-priv" onclick="openForumModal('السنة الثالثة خاص')">
                     <div class="card-icon"><i class="fas fa-gavel"></i></div>
                     <h3>السنة الثالثة</h3>
                     <p>قانون خاص</p>
-                    <a href="#" class="forum-link">دخول القسم <i class="fas fa-arrow-left"></i></a>
+                    <button class="forum-link">المشاركة في المنتدى <i class="fas fa-arrow-left"></i></button>
                 </div>
             </div>
         </section>
+
+        <div id="forumModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeForumModal()">&times;</span>
+                <h3 id="modalTitle">شروط المشاركة في المنتدى</h3>
+                <div class="modal-body">
+                    
+                    <div class="participation-box">
+                        <h4><i class="fab fa-telegram"></i> آلية المشاركة</h4>
+                        <p>لكل طالب ينوي المشاركة بفكرة، مقال، أو استفسار، يرجى التواصل مباشرة مع المشرف عبر المعرف التالي:</p>
+                        <a href="https://t.me/mbsasaaa" target="_blank" class="contact-link">@mbsasaaa</a>
+                        
+                        <ul class="forum-rules">
+                            <li><i class="fas fa-check-circle"></i> أن تكون الفكرة هادفة وتخدم البحث العلمي.</li>
+                            <li><i class="fas fa-check-circle"></i> أن تكون نافعة للزملاء ولها صلة بالمقياس.</li>
+                            <li><i class="fas fa-check-circle"></i> الالتزام بآداب الحوار والنقاش الأكاديمي.</li>
+                        </ul>
+                    </div>
+
+                    <div class="wisdom-section">
+                        <div class="quote-box quran">
+                            <i class="fas fa-quran icon-bg"></i>
+                            <p class="quote-text">﷽ <br> "يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ بِالْقِسْطِ شُهَدَاءَ لِلَّهِ وَلَوْ عَلَى أَنفُسِكُمْ"</p>
+                            <span class="quote-source">[سورة النساء: 135]</span>
+                        </div>
+
+                        <div class="quote-box hadith">
+                            <p class="quote-text">قال رسول الله ﷺ: <br> "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا، سَهَّلَ اللهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ"</p>
+                            <span class="quote-source">[رواه مسلم]</span>
+                        </div>
+
+                        <div class="quote-box scholar">
+                            <p class="quote-text">"مَنْ أَرَادَ الدُّنْيَا فَعَلَيْهِ بِالْعِلْمِ، وَمَنْ أَرَادَ الآخِرَةَ فَعَلَيْهِ بِالْعِلْمِ"</p>
+                            <span class="quote-source">- الإمام الشافعي (رحمه الله)</span>
+                        </div>
+
+                        <div class="quote-box jurist">
+                            <p class="quote-text">"القانون ليس مجرد نصوص جامدة، بل هو روح العدالة التي تسري في عروق المجتمع لضمان استقراره"</p>
+                            <span class="quote-source">- من أدبيات الفقه القانوني الجزائري</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section id="schedule">
             <div class="section-header">
@@ -118,7 +162,7 @@
                     </table>
                 </div>
             </div>
-            </section>
+        </section>
 
         <section id="judicial-map">
             <div class="section-header">
@@ -126,7 +170,7 @@
                 <div class="line"></div>
             </div>
             <div class="judicial-map-box">
-                <p>اختر المجلس القضائي (بحث سريع عبر خرائط جوجل):</p>
+                <p>اختر المجلس القضائي:</p>
                 <select id="courtsDropdown" onchange="if(this.value) window.open(this.value, '_blank')">
                     <option value="">-- جاري تحميل القائمة... --</option>
                 </select>
@@ -135,11 +179,11 @@
 
         <section id="rules" class="rules-section">
             <div class="section-header">
-                <h2>📜 القانون الداخلي (50 مادة)</h2>
+                <h2>📜 القانون الداخلي</h2>
                 <div class="line"></div>
             </div>
             <div class="rules-scroll-box" id="rulesContainer">
-                <p style="text-align:center;">جاري جلب القانون الكامل...</p>
+                <p style="text-align:center;">جاري جلب القانون...</p>
             </div>
         </section>
 

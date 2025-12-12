@@ -13,17 +13,12 @@
     <button onclick="topFunction()" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <nav class="navbar">
-        <a href="#" class="logo-container">
-            <img src="logo.jpg" alt="شعار SWIMA" class="logo-img">
-            <span class="logo-text">SWIMA</span>
-        </a>
-        
+        <div class="logo"><i class="fas fa-scale-balanced"></i> SWIMA</div>
         <div class="nav-content">
             <ul class="nav-links">
-                <li><a href="#year1">السنة الأولى</a></li>
-                <li><a href="#year2">السنة الثانية</a></li>
                 <li><a href="#schedule">التوقيت</a></li>
-                <li><a href="#about">عن المشرف</a></li>
+                <li><a href="#rules">القانون الداخلي</a></li>
+                <li><a href="#courses">المحاضرات</a></li>
             </ul>
             <button id="theme-toggle" class="theme-btn" title="تغيير المظهر">
                 <i class="fas fa-moon"></i>
@@ -34,12 +29,12 @@
     <header class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
-                <span class="badge">المنصة القانونية</span>
-                <h1>مجموعة SWIMA التعليمية</h1>
+                <span class="badge">السنة الجامعية 2025/2026</span>
+                <h1>موسوعة SWIMA التعليمية</h1>
                 <p>شروحات قانونية مبسطة بإشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
                 
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس...">
+                    <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس (مثال: تجاري، دستوري)...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
 
@@ -50,80 +45,18 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="courses">
         
-        <section id="year1">
-            <div class="section-header">
-                <h2>السنة الأولى ليسانس</h2>
-                <div class="line"></div>
-            </div>
-            <div class="cards-grid">
-                <div class="card" data-title="مدخل للعلوم القانونية">
-                    <div class="icon-box"><i class="fas fa-university"></i></div>
-                    <h3>مدخل للعلوم القانونية</h3>
-                    <p>نظرية القانون ونظرية الحق.</p>
-                    <a href="#" class="card-btn">تحميل الملخص</a>
-                </div>
-                <div class="card" data-title="القانون الدستوري">
-                    <div class="icon-box"><i class="fas fa-landmark"></i></div>
-                    <h3>القانون الدستوري</h3>
-                    <p>الأنظمة السياسية والدساتير.</p>
-                    <a href="#" class="card-btn">تحميل الملخص</a>
-                </div>
-                <div class="card" data-title="التنظيم القضائي">
-                    <div class="icon-box"><i class="fas fa-gavel"></i></div>
-                    <h3>التنظيم القضائي</h3>
-                    <p>هيكلة المحاكم الجزائرية.</p>
-                    <a href="#" class="card-btn">تحميل الملخص</a>
-                </div>
-            </div>
-        </section>
-
-        <div style="height: 60px;"></div>
-
-        <section id="year2">
-            <div class="section-header">
-                <h2>السنة الثانية ليسانس</h2>
-                <div class="line"></div>
-            </div>
-            <div class="cards-grid">
-                <div class="card" data-title="القانون المدني">
-                    <div class="icon-box"><i class="fas fa-file-signature"></i></div>
-                    <h3>القانون المدني</h3>
-                    <p>الالتزامات والعقود.</p>
-                    <a href="#" class="card-btn">تحميل الملخص</a>
-                </div>
-                <div class="card" data-title="القانون التجاري">
-                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
-                    <h3>القانون التجاري</h3>
-                    <p>التاجر والشركات التجارية.</p>
-                    <a href="#" class="card-btn">تحميل الملخص</a>
-                </div>
-                <div class="card" data-title="القانون الجنائي العام">
-                    <div class="icon-box"><i class="fas fa-handcuffs"></i></div>
-                    <h3>القانون الجنائي</h3>
-                    <p>الجريمة والعقوبة.</p>
-                    <a href="#" class="card-btn">تحميل الملخص</a>
-                </div>
-            </div>
-        </section>
-
-        <div id="noResults" style="display:none; text-align:center; margin-top:20px;">
-            <h3>لا توجد نتائج مطابقة 😕</h3>
-        </div>
-
-        <div style="height: 60px;"></div>
-
         <section id="schedule">
             <div class="section-header">
-                <h2>📅 رزنامة التوقيت الدراسي (2025/2026)</h2>
+                <h2>📅 رزنامة التوقيت الدراسي</h2>
                 <div class="line"></div>
-                <p style="text-align: center; color: var(--text-sec); margin-top: 10px;">الدراسة تنطلق من الساعة 19:00 مساءً</p>
+                <p class="schedule-note">الدراسة تنطلق مساءً ابتداءً من الساعة 19:00</p>
             </div>
 
-            <div class="schedule-container">
-                <h3 class="schedule-title">السنة الأولى ليسانس</h3>
-                <div class="table-wrapper">
+            <div class="schedule-card">
+                <h3><i class="fas fa-user-graduate"></i> السنة الأولى ليسانس</h3>
+                <div class="table-responsive">
                     <table class="swima-table">
                         <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
                         <tbody>
@@ -135,9 +68,9 @@
                 </div>
             </div>
 
-            <div class="schedule-container">
-                <h3 class="schedule-title">السنة الثانية ليسانس</h3>
-                <div class="table-wrapper">
+            <div class="schedule-card">
+                <h3><i class="fas fa-user-graduate"></i> السنة الثانية ليسانس</h3>
+                <div class="table-responsive">
                     <table class="swima-table">
                         <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
                         <tbody>
@@ -147,11 +80,12 @@
                         </tbody>
                     </table>
                 </div>
+                <p class="note-text">* مقياس "تاريخ النظم" و"قانون الأسرة" يقدم كفيديوهات مجانية.</p>
             </div>
 
-            <div class="schedule-container">
-                <h3 class="schedule-title">السنة الثالثة (قانون عام)</h3>
-                <div class="table-wrapper">
+            <div class="schedule-card">
+                <h3><i class="fas fa-balance-scale"></i> السنة الثالثة (قانون عام)</h3>
+                <div class="table-responsive">
                     <table class="swima-table">
                         <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
                         <tbody>
@@ -163,9 +97,9 @@
                 </div>
             </div>
 
-            <div class="schedule-container">
-                <h3 class="schedule-title">السنة الثالثة (قانون خاص)</h3>
-                <div class="table-wrapper">
+            <div class="schedule-card">
+                <h3><i class="fas fa-gavel"></i> السنة الثالثة (قانون خاص)</h3>
+                <div class="table-responsive">
                     <table class="swima-table">
                         <thead><tr><th>اليوم</th><th>التوقيت</th><th>المقياس</th></tr></thead>
                         <tbody>
@@ -175,16 +109,93 @@
                         </tbody>
                     </table>
                 </div>
+                <p class="note-text">* مقياسي المواريث وطرق التنفيذ تقدم كفيديوهات وملخصات لاحقاً.</p>
             </div>
+        </section>
 
-            <div class="notes-container">
-                <h3><i class="fas fa-info-circle"></i> ملاحظات هامة للطلبة:</h3>
-                <ul class="notes-list">
-                    <li><strong>شرح الدروس:</strong> مجاني بالكامل لكل الطلبة في القناة العامة.</li>
-                    <li><strong>الملخصات الأساسية:</strong> ستكون بأسعار رمزية (في المتناول).</li>
-                    <li><strong>المقاييس الثانوية (مجاناً):</strong> فيديوهات وملخصات لمواد مثل "تاريخ النظم" و"قانون الأسرة".</li>
-                    <li><strong>حصص المنهجية:</strong> حصص إضافية يومي الخميس أو السبت (التفاصيل في التليجرام).</li>
-                </ul>
+        <div style="height: 50px;"></div>
+
+        <section id="year1">
+            <h3 class="year-title">ملخصات السنة الأولى</h3>
+            <div class="cards-grid">
+                <div class="card" data-title="مدخل للعلوم القانونية">
+                    <div class="icon-box"><i class="fas fa-university"></i></div>
+                    <h3>مدخل للعلوم القانونية</h3>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
+                </div>
+                <div class="card" data-title="القانون الدستوري">
+                    <div class="icon-box"><i class="fas fa-landmark"></i></div>
+                    <h3>القانون الدستوري</h3>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
+                </div>
+                <div class="card" data-title="التنظيم القضائي">
+                    <div class="icon-box"><i class="fas fa-gavel"></i></div>
+                    <h3>التنظيم القضائي</h3>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="year2">
+            <h3 class="year-title">ملخصات السنة الثانية</h3>
+            <div class="cards-grid">
+                <div class="card" data-title="القانون المدني">
+                    <div class="icon-box"><i class="fas fa-file-signature"></i></div>
+                    <h3>القانون المدني</h3>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
+                </div>
+                <div class="card" data-title="القانون التجاري">
+                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                    <h3>القانون التجاري</h3>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
+                </div>
+                <div class="card" data-title="القانون الجنائي العقوبات">
+                    <div class="icon-box"><i class="fas fa-handcuffs"></i></div>
+                    <h3>قانون العقوبات</h3>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
+                </div>
+            </div>
+        </section>
+
+        <div id="noResults" style="display:none; text-align:center;"><h3>لا توجد نتائج مطابقة 😕</h3></div>
+
+        <div style="height: 50px;"></div>
+
+        <section id="rules" class="rules-section">
+            <div class="section-header">
+                <h2>📜 القانون الداخلي والنظام الأساسي</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="rules-container">
+                <div class="rule-box">
+                    <h4>الباب الأول: أحكام عامة وتعريفات</h4>
+                    <p><strong>المادة 1:</strong> SWIMA هي منصة تعليمية مستقلة لطلبة الحقوق بإشراف الطالب جمعة محمد عرفات.</p>
+                    <p><strong>المادة 2 (المصطلحات):</strong> يقصد بالمصطلحات التالية المعاني الموضحة:<br>
+                    - <strong>بصفة منتظمة:</strong> الحضور الفعلي للمكالمات الصوتية والمشاركة فيها لثلاث (03) حصص متتالية على الأقل.<br>
+                    - <strong>مجموعة التميز:</strong> فضاء خاص للأعضاء الملتزمين يحتوي على الأرشيف.<br>
+                    - <strong>الطالب المشترك:</strong> الطالب الذي اقتنى الملخصات المدفوعة.</p>
+                </div>
+
+                <div class="rule-box">
+                    <h4>الباب الثاني: النظام الدراسي والتحفيزات</h4>
+                    <p><strong>المادة 11:</strong> تنطلق الدروس يومياً على الساعة 19:00 مساءً.</p>
+                    <p><strong>المادة 16 مكرر (مكافأة الانضباط):</strong> يحصل العضو الذي يحضر الدروس الصوتية <strong>بصفة منتظمة</strong> (3 مرات متتالية) على شرف الانضمام إلى "مجموعة التميز" الخاصة بسنته، ويستفيد من:<br>
+                    1- ملخص مجاني كهدية.<br>
+                    2- الوصول الكامل لتسجيلات المحاضرات السابقة.</p>
+                </div>
+
+                <div class="rule-box">
+                    <h4>الباب الثالث: الخدمات المدفوعة والمراجعة</h4>
+                    <p><strong>المادة 40:</strong> الرسوم المفروضة على الملخصات هي رسوم رمزية لدعم المنصة.</p>
+                    <p><strong>المادة 44 مكرر (مراجعة العطلة):</strong> يستفيد الطلبة الذين اشتروا الملخصات من <strong>موعد خاص للمراجعة</strong> خلال فترة العطلة، يقوم فيها الطالب الباحث جمعة محمد عرفات بالمراجعة معهم صوتياً في توقيت مغاير يتم الإعلان عنه لاحقاً.</p>
+                </div>
+
+                <div class="rule-box">
+                    <h4>الباب الرابع: التزامات الأعضاء</h4>
+                    <p><strong>المادة 24:</strong> يمنع نشر الملخصات المدفوعة أو مشاركتها خارج المجموعة.</p>
+                    <p><strong>المادة 50:</strong> الانضمام للمجموعة يعني الموافقة التامة على هذا القانون.</p>
+                </div>
             </div>
         </section>
 
@@ -192,8 +203,8 @@
 
     <footer id="about">
         <div class="footer-content">
-            <h3>مجموعة SWIMA</h3>
-            <p>جميع الحقوق محفوظة للطالب <strong>جمعة محمد عرفات</strong> &copy; 2025</p>
+            <h3>SWIMA Project</h3>
+            <p>جميع الحقوق محفوظة للطالب <strong>جمعة محمد عرفات</strong> &copy; 2025/2026</p>
         </div>
     </footer>
 

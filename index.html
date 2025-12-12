@@ -3,128 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIMA | المنصة القانونية</title>
+    <title>SWIMA | منصة الطالب جمعة محمد عرفات</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <button onclick="topFunction()" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
     <nav class="navbar">
-        <div class="logo"><i class="fas fa-balance-scale"></i> SWIMA</div>
-        <ul class="nav-links">
-            <li><a href="#year1">السنة الأولى</a></li>
-            <li><a href="#year2">السنة الثانية</a></li>
-            <li><a href="#about">عن المشرف</a></li>
-        </ul>
+        <div class="logo"><i class="fas fa-scale-balanced"></i> SWIMA</div>
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="#year1">السنة الأولى</a></li>
+                <li><a href="#year2">السنة الثانية</a></li>
+                <li><a href="#about">عن المشرف</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+        </div>
     </nav>
 
     <header class="hero">
-        <div class="overlay">
+        <div class="hero-overlay">
             <div class="hero-content">
-                <span class="badge">المنصة التعليمية الأولى</span>
-                <h1>موسوعة SWIMA القانونية</h1>
-                <p>شروحات مبسطة ومحاضرات في العلوم القانونية <br> تحت إشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
+                <span class="badge">المنصة القانونية</span>
+                <h1>موسوعة SWIMA التعليمية</h1>
+                <p>شروحات قانونية مبسطة بإشراف الطالب: <strong>جمعة محمد عرفات</strong></p>
                 
-                <div class="search-box">
-                    <input type="text" placeholder="ابحث عن مقياس أو درس...">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="ابحث عن اسم المقياس...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
 
-                <div class="header-buttons">
-                    <a href="رابط_التلغرام_هنا" class="btn primary-btn"><i class="fab fa-telegram-plane"></i> انضم للقناة الرسمية</a>
-                </div>
+                <a href="#" class="btn-pulse">
+                    <i class="fab fa-telegram-plane"></i> انضم للقناة الرسمية
+                </a>
             </div>
         </div>
     </header>
 
     <main class="container">
-        
-        <section id="year1" class="section-padding">
+        <section id="year1">
             <div class="section-header">
                 <h2>السنة الأولى ليسانس</h2>
                 <div class="line"></div>
             </div>
             <div class="cards-grid">
-                <div class="card">
-                    <div class="icon-bg"><i class="fas fa-university"></i></div>
+                <div class="card" data-title="مدخل للعلوم القانونية">
+                    <div class="icon-box"><i class="fas fa-university"></i></div>
                     <h3>مدخل للعلوم القانونية</h3>
-                    <p>نظرية القانون والحق، وتقسيمات القاعدة القانونية.</p>
-                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
+                    <p>نظرية القانون ونظرية الحق.</p>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
                 </div>
-                <div class="card">
-                    <div class="icon-bg"><i class="fas fa-landmark"></i></div>
+                <div class="card" data-title="القانون الدستوري">
+                    <div class="icon-box"><i class="fas fa-landmark"></i></div>
                     <h3>القانون الدستوري</h3>
-                    <p>المبادئ الدستورية، وأنظمة الحكم المقارنة.</p>
-                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
+                    <p>الأنظمة السياسية والدساتير.</p>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
                 </div>
-                <div class="card">
-                    <div class="icon-bg"><i class="fas fa-gavel"></i></div>
+                <div class="card" data-title="التنظيم القضائي">
+                    <div class="icon-box"><i class="fas fa-gavel"></i></div>
                     <h3>التنظيم القضائي</h3>
-                    <p>مبادئ القضاء، المحكمة العليا، والمجالس القضائية.</p>
-                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
+                    <p>هيكلة المحاكم الجزائرية.</p>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
                 </div>
             </div>
         </section>
 
-        <section id="year2" class="section-padding">
+        <div style="height: 60px;"></div>
+
+        <section id="year2">
             <div class="section-header">
                 <h2>السنة الثانية ليسانس</h2>
                 <div class="line"></div>
             </div>
             <div class="cards-grid">
-                <div class="card">
-                    <div class="icon-bg"><i class="fas fa-file-contract"></i></div>
+                <div class="card" data-title="القانون المدني">
+                    <div class="icon-box"><i class="fas fa-file-signature"></i></div>
                     <h3>القانون المدني</h3>
-                    <p>مصادر الالتزام، العقد، الإرادة المنفردة، والعمل غير المشروع.</p>
-                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
+                    <p>الالتزامات والعقود.</p>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
                 </div>
-                <div class="card">
-                    <div class="icon-bg"><i class="fas fa-briefcase"></i></div>
+                <div class="card" data-title="القانون التجاري">
+                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
                     <h3>القانون التجاري</h3>
-                    <p>النظرية العامة للقانون التجاري والشركات.</p>
-                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
+                    <p>التاجر والشركات التجارية.</p>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
                 </div>
-                <div class="card">
-                    <div class="icon-bg"><i class="fas fa-handcuffs"></i></div>
-                    <h3>القانون الجنائي العام</h3>
-                    <p>الجريمة وأركانها، والمسؤولية الجزائية.</p>
-                    <a href="#" class="card-link">الذهاب للملخص <i class="fas fa-arrow-left"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>عن المشرف</h2>
-                    <h3>الطالب: جمعة محمد عرفات</h3>
-                    <p>طالب حقوق مهتم بتبسيط العلوم القانونية لزملائنا الطلبة. نسعى من خلال منصة SWIMA إلى توفير مرجع شامل وسهل الوصول إليه للمقاييس الأساسية.</p>
-                    <ul class="achievements">
-                        <li><i class="fas fa-check-circle"></i> شروحات مبسطة</li>
-                        <li><i class="fas fa-check-circle"></i> ملخصات PDF</li>
-                        <li><i class="fas fa-check-circle"></i> متابعة مستمرة</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="صورة الطالب">
+                <div class="card" data-title="القانون الجنائي العام">
+                    <div class="icon-box"><i class="fas fa-handcuffs"></i></div>
+                    <h3>القانون الجنائي</h3>
+                    <p>الجريمة والعقوبة.</p>
+                    <a href="#" class="card-btn">تحميل الملخص</a>
                 </div>
             </div>
         </section>
 
+        <div id="noResults" style="display:none; text-align:center;"><h3>لا توجد نتائج 😕</h3></div>
     </main>
 
-    <footer>
+    <footer id="about">
         <div class="footer-content">
-            <h3>SWIMA</h3>
-            <p>جميع الحقوق محفوظة للطالب جمعة محمد عرفات &copy; 2024</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-            </div>
+            <h3>SWIMA Project</h3>
+            <p>جميع الحقوق محفوظة للطالب <strong>جمعة محمد عرفات</strong> &copy; 2024</p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

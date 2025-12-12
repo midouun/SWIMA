@@ -16,7 +16,7 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
-// 2. البحث (يعمل مع البطاقات فقط حالياً)
+// 2. البحث الذكي (للبطاقات)
 searchInput.addEventListener('keyup', (e) => {
     const text = e.target.value.toLowerCase();
     let hasResults = false;
@@ -46,7 +46,32 @@ window.onscroll = function() {
         scrollBtn.style.display = "none";
     }
 };
+function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }
 
-function topFunction() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+// 4. شريط المبادئ القانونية (كل 10 ثواني)
+const tickerElement = document.getElementById('legalTicker');
+const maxims = [
+    "العقد شريعة المتعاقدين (المادة 106 مدني).",
+    "الأصل في الأشياء الإباحة ما لم يرد نص بالتحريم.",
+    "لا جريمة ولا عقوبة إلا بنص (مبدأ الشرعية).",
+    "البينة على من ادعى واليمين على من أنكر.",
+    "الجهل بالقانون ليس عذراً.",
+    "الشك يفسر لمصلحة المتهم.",
+    "الغرم بالغنم (من ينال النفع يتحمل الضرر).",
+    "الخاص يقيد العام.",
+    "لا ضرر ولا ضرار."
+];
+
+let currentIndex = 0;
+
+function updateTicker() {
+    tickerElement.style.opacity = 0;
+    setTimeout(() => {
+        tickerElement.innerText = maxims[currentIndex];
+        tickerElement.style.opacity = 1;
+        currentIndex = (currentIndex + 1) % maxims.length;
+    }, 500);
 }
+
+setInterval(updateTicker, 10000);
+updateTicker();

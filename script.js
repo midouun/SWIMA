@@ -16,7 +16,7 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
-// 2. البحث
+// 2. البحث (يعمل مع البطاقات فقط حالياً)
 searchInput.addEventListener('keyup', (e) => {
     const text = e.target.value.toLowerCase();
     let hasResults = false;

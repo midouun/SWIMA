@@ -18,15 +18,22 @@ themeBtn.addEventListener('click', () => {
 searchInput.addEventListener('keyup', (e) => {
     const text = e.target.value.toLowerCase();
     let hasResults = false;
+
     cards.forEach(card => {
-        if (card.getAttribute('data-title').includes(text)) {
+        const title = card.getAttribute('data-title');
+        if (title.includes(text)) {
             card.style.display = "block";
             hasResults = true;
         } else {
             card.style.display = "none";
         }
     });
-    noResults.style.display = hasResults ? "none" : "block";
+
+    if (hasResults) {
+        noResults.style.display = "none";
+    } else {
+        noResults.style.display = "block";
+    }
 });
 
 window.onscroll = function() {
@@ -37,4 +44,6 @@ window.onscroll = function() {
     }
 };
 
-function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }
+function topFunction() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
